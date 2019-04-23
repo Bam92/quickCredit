@@ -10,18 +10,31 @@
 <body>
  <main id="main-application">
     <header>
+        <div class="container">
 
         <nav class="navbar" role="navigation">
           <div><a class="mainHeader_logo" href="#">Quick Credit</a></div>
            <ul class="navLinks">
-              <li class="navItem sign" id="signup"><a href="signup.html">Sign Up</a></li>
-              <li class="navItem sign"><a href="signin.html">Sign In</a></li>
+              <li class="navItem " ><a href="#" title="Apply for a loan">Apply</a></li>
+              <li class="userProfile">
+               <img src="images/avatar.png" alt="borrower">
+              </li>
            </ul>
+           <div class="dropdown-content hidden" id="DropdownProfile">
+           <ul>
+              <li><a href="#"><strong>Patience Kavira</strong></a></li>
+              <li><a class="" href="#"> Profile </a></li>
+              <li><a class="" href="#"> My loans history </a></li>
+              <li><a class="" href="#"> Logout</a></li>            
+           </ul>
+          
+            
+           </div>
         </nav>
-        
+        </div>
      </header>
      
-  <div class="form-container apply-container">
+  <div class="form-container apply-container container">
    <form action="#">
       <h1>Apply for a loan</h1>
       

@@ -139,7 +139,7 @@ form h1, h4 {
    margin: -20px 0 50px;
 }
 
-input, select {
+input, select, textarea {
 	background-color: #eee;
 	border: none;
 	padding: 12px 15px;

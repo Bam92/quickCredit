@@ -172,7 +172,19 @@ footer {
    /*color: #ffffff;*/
    display: flex;
    justify-content: center;
-   /*position: fixed;*/
+   position: fixed;
    bottom: 0;
    width: 100%;
+}
+
+/* -------------------------------
+            Application
+---------------------------------*/
+#main-application {
+   background: #fafafa;
+}
+
+#footer-application {
+   background-color: #7451eb;
+   color: #fff;
 }

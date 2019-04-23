@@ -1,27 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
    <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <title>Apply for a loan</title>
    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+ <main id="main-application">
+    <header>
+
+        <nav class="navbar" role="navigation">
+          <div><a class="mainHeader_logo" href="#">Quick Credit</a></div>
+           <ul class="navLinks">
+              <li class="navItem sign" id="signup"><a href="signup.html">Sign Up</a></li>
+              <li class="navItem sign"><a href="signin.html">Sign In</a></li>
+           </ul>
+        </nav>
+        
+     </header>
+     
   <div class="form-container apply-container">
    <form action="#">
-      <h1>Fill out this form</h1>
+      <h1>Apply for a loan</h1>
       
       <input type="text" placeholder="Amout in USD" id="amount" required>
-      <div class="inputError"></div>
-      <textarea name="description" id="" cols="30" rows="10" placeholder="description"></textarea>
+      <div class="inputError" id="helpAmount"></div>
+      <textarea name="description" id="" cols="30" rows="10" placeholder="description" required></textarea>
       <div class="inputError"></div>
       
       <input type="submit" value="Apply">
             
    </form>
-</div> 
+</div>
+
+ <footer id="footer-application">
+   <p>Code and design: <a href="www.abelmbula.com">Abel</a></p>
+ </footer> 
+
+</main>
 
 <script>
-
+console.log("test"); // why main.js cannot function??????
 </script>
  <scrip src="main.js"></scrip> 
 </body>

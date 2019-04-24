@@ -1,10 +1,21 @@
+/* eslint-env es6 */
+/* eslint-disable */
+
+console.log("test");
+
+/* eslint-env es6 */
+/* eslint-disable */
+
 // Sign Up
-   let firstName = document.getElementById("firstName");
-   const lastName = document.getElementById("lastName");
+  
+
+   if (document.getElementById("firstName", "lastName", "phone", "email", "password") != null) {
+       const firstName = document.getElementById("firstName");
+       const lastName = document.getElementById("lastName");
    const phone = document.getElementById("phone");
    const email = document.getElementById("email");
    const password = document.getElementById("password");
-   
+
    firstName.addEventListener("blur", function(e) {
       const firstNameHelp = document.getElementById("helpFirstName");
 
@@ -46,7 +57,7 @@
       else if (e.target.value.length < 9) passwordHelp.textContent = "Field must contain at least 9 charactors";
       //else if (!regEmail.test(e.target.value)) emailHelp.textContent = "Invalid email address";
    });
-
+   }
 // Sign In
    //const email = document.getElementById("email");
   // const password = document.getElementById("password");
@@ -71,11 +82,14 @@
    });
 */
 // Application
-/*const loanAmount = document.getElementById("amount");
+if (document.getElementById("amount") != null) {
+const loanAmount = document.getElementById("amount");
    
    loanAmount.addEventListener("blur", function(e) {
       const loanAmountHelp = document.getElementById("helpAmount");
 
-      if (e.target.value.isNaN(loanAmount)) loanAmountHelp.textContent = "Field cannot contain a string";      
-      //if (e.target.value.length === 1) firstNameHelp.textContent = "Field must contain at least 2 letters";
-   });*/
+      if (e.target.value === "") loanAmountHelp.textContent = "Field cannot be empty";
+      else if (isNaN(e.target.value) === true) loanAmountHelp.textContent = "Field cannot contain a string";      
+      else if (e.target.value < 20) loanAmountHelp.textContent = "Field must contain at least $ 20.00";
+   });
+}

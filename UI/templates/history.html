@@ -10,36 +10,126 @@
 <body>
   <main>
     <header>
+        <div class="container">
 
         <nav class="navbar" role="navigation">
-          <div><a class="mainHeader_logo" href="#">Quick Credit</a></div>
+          <div><a class="mainHeader_logo" href="../index.html">Quick Credit</a></div>
            <ul class="navLinks">
-              <!--<li class="navItem"><a href="#">Borrow</a></li>
-              <li class="navItem"><a href="#">About Us</a></li>-->
-              
-              <li class="navItem sign" id="signup"><a href="templates/signup.html">Sign Up</a></li>
-              <li class="navItem sign"><a href="templates/signin.html">Sign In</a></li>
+              <li class="navItem " ><a href="#" title="Apply for a loan">Apply</a></li>
+              <li class="userProfile">
+               <a href=""><img src="../images/avatar.png" alt="borrower"></a> 
+              </li>
            </ul>
+           <div class="dropdown-content hidden" id="DropdownProfile">
+           <ul>
+              <li><a href="#"><strong>Patience Kavira</strong></a></li>
+              <li><a class="" href="#"> Profile </a></li>
+              <li><a class="" href="#"> My loans history </a></li>
+              <li><a class="" href="#"> Logout</a></li>            
+           </ul>
+          
+            
+           </div>
         </nav>
-        
+        </div>
      </header>
      
      <div class="container">
+       <div id="loan_history">
         <aside id="loanSummary">
-           yexpl
+           <h1>Summary</h1>
+           <div class="init_summary">
+              <div><strong>Initial amount</strong><br><span class="amount_summary">$ 1500.00</span></div>
+              <div><strong>Amount due</strong><br><span class="amount_summary">$ 500.00</span></div>
+           </div>
+           <div class="last_summary">
+              <div><strong>Last payment done</strong><br><span class="amount_summary">$ 100.00</span> on date</div>
+              <div><strong>Loan description</strong><br><span class="loan_description_summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit beatae illum, quas corrupti quasi molestias incidunt eos modi aperiam, excepturi nulla! Assumenda, adipisci, ad!</span></div>
+           </div>
         </aside>
         <section id="loanHistory">
-           d
-           gh
+           <h1>History</h1>
+           <div class="loan_history_details">
+              <div class="table-container" role="table" aria-label="Payment">
+              <div class="flex-table header" role="rowgroup">
+                 <div class="flex-row first" role="columnheader">#</div>
+                 <div class="flex-row" role="columnheader">Amount</div>
+                 <div class="flex-row" role="columnheader">Date</div>
+              
+              </div>
+            <div class="flex-table row" role="rowgroup">
+              <div class="flex-row first" role="cell">10</div>
+              <div class="flex-row" role="cell">$ 100.00</div>
+              <div class="flex-row" role="cell">25/02/18 2:00:25</div>
+              
+            </div>
+            <div class="flex-table row" role="rowgroup">
+              <div class="flex-row first" role="cell">9</div>
+              <div class="flex-row" role="cell">$ 100.00</div>
+              <div class="flex-row" role="cell">25/02/18 2:00:25</div>
+              
+            </div>
+            <div class="flex-table row" role="rowgroup">
+              <div class="flex-row first" role="cell">8</div>
+              <div class="flex-row" role="cell">$ 100.00</div>
+              <div class="flex-row" role="cell">25/02/18 2:00:25</div>
+              
+            </div>
+            <div class="flex-table row" role="rowgroup">
+              <div class="flex-row first" role="cell">7</div>
+              <div class="flex-row" role="cell">$ 100.00</div>
+              <div class="flex-row" role="cell">25/02/18 2:00:25</div>
+              
+            </div>
+            <div class="flex-table row" role="rowgroup">
+              <div class="flex-row first" role="cell">6</div>
+              <div class="flex-row" role="cell">$ 100.00</div>
+              <div class="flex-row" role="cell">25/02/18 2:00:25</div>
+              
+            </div>
+            <div class="flex-table row" role="rowgroup">
+              <div class="flex-row first" role="cell">5</div>
+              <div class="flex-row" role="cell">$ 100.00</div>
+              <div class="flex-row" role="cell">25/02/18 2:00:25</div>
+              
+            </div>
+            <div class="flex-table row" role="rowgroup">
+              <div class="flex-row first" role="cell">4</div>
+              <div class="flex-row" role="cell">$ 100.00</div>
+              <div class="flex-row" role="cell">25/02/18 2:00:25</div>
+              
+            </div>
+            <div class="flex-table row" role="rowgroup">
+              <div class="flex-row first" role="cell">3</div>
+              <div class="flex-row" role="cell">$ 100.00</div>
+              <div class="flex-row" role="cell">25/02/18 2:00:25</div>
+              
+            </div>
+            <div class="flex-table row" role="rowgroup">
+              <div class="flex-row first" role="cell">2</div>
+              <div class="flex-row" role="cell">$ 100.00</div>
+              <div class="flex-row" role="cell">25/02/18 2:00:25</div>
+              
+            </div>
+            <div class="flex-table row" role="rowgroup">
+              <div class="flex-row first" role="cell">1</div>
+              <div class="flex-row" role="cell">$ 100.00</div>
+              <div class="flex-row" role="cell">25/02/18 2:00:25</div>
+              
+            </div>
+           </div>
+            </div>
         </section>
+       
      </div>
-        <footer>
+   </div>
+        <footer id="footer-color">
         <p>Code and design: <a href="www.abelmbula.com">Abel</a></p>
      </footer>
   </main>
   
   <script type="application/javascript" src="js/main.js"></script>
-  </main>
+
  <scrip src="../js/main.js"></scrip> 
 </body>
 </html>

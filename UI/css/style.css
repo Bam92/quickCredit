@@ -231,8 +231,13 @@ footer {
    border: none;
 }
 
+/*------------------------------
+         History
+-------------------------------*/
+
 #loan_history {
    display: flex;
+   justify-content: space-between;
 }
 
 #loanSummary {
@@ -257,16 +262,60 @@ footer {
    margin-bottom: 15px;
 }
 
-.loan_history_details div {
-   box-sizing: border-box;
+.loan_history_details {
+   
+   width: 100%;
+   height: 100%;
+   margin: 0;
+   padding: 0;
    
 }
+
+.loan_history_details div {
+   box-sizing: border-box;
+}
+
+.table-container {
+   /*display: block;*/
+   margin: 1em auto;
+   /*width: 90%;
+   max-width: 600px;*/
+   border-collapse: collapse;
+ }
+
+ td {
+    border: 1px solid #d9d9d9;
+    padding: 0.5rem;
+ }
+
+ th {
+   background: #7451eb;
+   color: #fff;
+   padding: 0.5em;
+   border: 1px solid #1565C0;
+ }
+
+ .flex-row {
+   width: 20%;
+ }
+
+ .flex-row:last-child {
+   width: 55%;
+ }
+ 
+ .flex-row, .flex-cell {
+   text-align: center;
+ }
+
+ .rowColor {
+    background: grey;
+ }
 
 /*$table-header: #1976D2;
 $table-header-border: #1565C0;
 $table-border: #d9d9d9;*/
 
-.flex-table {
+/*.flex-table {
    display: flex;
    flex-flow: row wrap;
    justify-content: space-between;
@@ -283,5 +332,6 @@ $table-border: #d9d9d9;*/
   display: block;
   margin: 2em auto;
   width: 100%;
-  /*max-width: 600px;*/
+  /*max-width: 600px;
 }
+*/

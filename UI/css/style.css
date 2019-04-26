@@ -230,3 +230,47 @@ footer {
    box-shadow: 0px 1px 4px rgba(0,0,0,0.25);
    border: none;
 }
+
+/*----------------------------
+Verify
+-----------------------------*/
+#verifyTip {
+   margin-bottom: 20px;
+  /* border: #7451eb 2px solid;*/
+}
+
+.clientsWrapper {
+   display: flex;
+   margin-bottom: 20px;
+}
+
+.clientDetailsBackground {
+   background: #7451eb;
+   padding: 10px;
+   color: #FFFFFF;
+}
+
+.clientImage img {
+   border-radius: 50%;
+   width: 100px;
+   height: 100px;
+   margin-right: 15px;
+}
+
+.clientDetails {
+   display: flex;
+   
+}
+
+.clientDetails div {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+.checkClient {
+   display: flex;
+   justify-content: space-between;
+   margin-top: 10px;
+}
+

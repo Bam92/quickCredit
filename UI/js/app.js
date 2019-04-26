@@ -93,3 +93,5 @@ const loanAmount = document.getElementById("amount");
       else if (e.target.value < 20) loanAmountHelp.textContent = "Field must contain at least $ 20.00";
    });
 }
+
+// Verify User

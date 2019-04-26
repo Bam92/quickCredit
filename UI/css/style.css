@@ -249,3 +249,26 @@ footer {
    width: 45%;
    margin-bottom: 15px;
 }
+
+#application-aproval {
+   display: flex;
+   justify-content: space-between;
+   width: 45%;
+   margin-top: 15px;
+}
+
+.approval {
+   width: 90px;
+   color: #FFFFFF;
+}
+
+.approval:last-of-type {
+   background: red;
+   border-color: red;
+   
+}
+
+.approval:first-of-type {
+   background: green;
+   border-color: green;
+}

@@ -274,3 +274,7 @@ Verify
    margin-top: 10px;
 }
 
+#activeItem {
+   border-bottom: red solid 3px;
+   
+}

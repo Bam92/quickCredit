@@ -231,6 +231,26 @@ footer {
    border: none;
 }
 
+
+/*-----------------------------
+      Loan application View
+-----------------------------*/
+.applicationDescription {
+   margin-top: 10px;
+   padding: 8px;
+   line-height: 28px;
+   width: 45%;
+   border: #7451eb 2px solid;
+   border-radius: 2px;
+}
+
+.applicationXWrapper div:first-child {
+   display: flex;
+   justify-content: space-between;
+   width: 45%;
+   margin-bottom: 15px;
+}
+
 /*----------------------------
 Verify
 -----------------------------*/
@@ -278,3 +298,4 @@ Verify
    border-bottom: red solid 3px;
    
 }
+

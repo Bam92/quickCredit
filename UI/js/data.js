@@ -1,3 +1,8 @@
+/*
+* Concert Seat
+* @author Abel Lifaefi Mbula
+*/
+
 /* eslint-env es6 */
 /* eslint-disable */
 
@@ -51,6 +56,12 @@ const clients = [
 }
 ];
 
+function getFullName (id) {
+   for (let i = 0; i < clients.length; i++) {
+      if (clients[i].id === id) return clients[i].fullName();      
+   }
+}
+
 let output = "";
 
 for (let i = 0; i < clients.length; i++) {
@@ -62,24 +73,25 @@ for (let i = 0; i < clients.length; i++) {
 
 //document.getElementById("clientsList").innerHTML = output;
 
-//console.log(clients.length);
-
 // Loans applications view
 const loanApplicants = [
 {
    clientID: 2,
    amount: 850.00,
-   date: "02.13.2019 5:00"
+   date: "02.13.2019 5:00",
+   status: "current"
 },
 {
    clientID: 3,
    amount: 550.00,
-   date: "02.19.2019 12:00"
+   date: "02.19.2019 12:00",
+   status: ""
 },
 {
    clientID: 1,
    amount: 950.00,
-   date: "02.22.2019 8:00"
+   date: "02.22.2019 8:00",
+   status: "current"
 }
 ];
 
@@ -94,13 +106,44 @@ for (let i = 0; i < loanApplicants.length; i++) {
 
 document.getElementById("listLoaners").innerHTML = listLoans;
 
-console.log(getFullName(3));
+/**
+* @TODO: return total of applications: all, current and paid
+*/
 
-function getFullName (id) {
-   for (let i = 0; i < clients.length; i++) {
-      if (clients[i].id === id) return clients[i].fullName();      
+// Current loans
+const currentLoans = [];
+
+for (let i = 0; i < loanApplicants.length; i++) {
+   if (loanApplicants[i].status === "current") {
+      currentLoans.push(loanApplicants[i]);
+      
    }
+   
 }
+
+let listCurrentLoans = "";
+
+for (let i = 0; i < currentLoans.length; i++) {
+   listCurrentLoans += "<tr><td>" + getFullName(currentLoans[i].clientID) + 
+             "</td><td>" + Number(currentLoans[i].amount) + " USD" +
+             "</td><td>" + currentLoans[i].date + 
+             "</td></tr>";
+}
+
+const current = document.getElementById("currentLoans");
+const all = document.getElementById("all");
+
+all.addEventListener("click", function () {
+   document.getElementById("listCurrentLoaners").id = "listLoaners";
+   document.getElementById("listLoaners").innerHTML = listLoans;
+});
+
+current.addEventListener("click", function () {
+   document.getElementById("listLoaners").id = "listCurrentLoaners";
+   document.getElementById("listCurrentLoaners").innerHTML = listCurrentLoans;
+}); 
+
+console.log(currentLoans);
 
 
 

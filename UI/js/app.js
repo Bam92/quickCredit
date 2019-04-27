@@ -1,20 +1,13 @@
 /* eslint-env es6 */
 /* eslint-disable */
 
-console.log("test");
-
-/* eslint-env es6 */
-/* eslint-disable */
-
 // Sign Up
-  
-
    if (document.getElementById("firstName", "lastName", "phone", "email", "password") != null) {
        const firstName = document.getElementById("firstName");
        const lastName = document.getElementById("lastName");
-   const phone = document.getElementById("phone");
-   const email = document.getElementById("email");
-   const password = document.getElementById("password");
+      const phone = document.getElementById("phone");
+      const email = document.getElementById("email");
+      const password = document.getElementById("password");
 
    firstName.addEventListener("blur", function(e) {
       const firstNameHelp = document.getElementById("helpFirstName");
@@ -94,4 +87,3 @@ const loanAmount = document.getElementById("amount");
    });
 }
 
-// Verify User

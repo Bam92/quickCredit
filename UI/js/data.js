@@ -65,10 +65,9 @@ for (let i = 0; i < clients.length; i++) {
 //console.log(clients.length);
 
 // Loans applications view
-
 const loanApplicants = [
 {
-   clientID: 1,
+   clientID: 2,
    amount: 850.00,
    date: "02.13.2019 5:00"
 },
@@ -78,7 +77,7 @@ const loanApplicants = [
    date: "02.19.2019 12:00"
 },
 {
-   clientID: 2,
+   clientID: 1,
    amount: 950.00,
    date: "02.22.2019 8:00"
 }
@@ -87,13 +86,21 @@ const loanApplicants = [
 let listLoans = "";
 
 for (let i = 0; i < loanApplicants.length; i++) {
-   listLoans += "<tr><td>" + loanApplicants[i].clientID + 
-             "</td><td>" + Number(loanApplicants[i].amount) +
+   listLoans += "<tr><td>" + getFullName(loanApplicants[i].clientID) + 
+             "</td><td>" + Number(loanApplicants[i].amount) + " USD" +
              "</td><td>" + loanApplicants[i].date + 
              "</td></tr>";
 }
 
 document.getElementById("listLoaners").innerHTML = listLoans;
+
+console.log(getFullName(3));
+
+function getFullName (id) {
+   for (let i = 0; i < clients.length; i++) {
+      if (clients[i].id === id) return clients[i].fullName();      
+   }
+}
 
 
 

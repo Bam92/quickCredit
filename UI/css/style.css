@@ -146,7 +146,7 @@ span span {
 /*---------------------------------------
        FORM
 ---------------------------------------*/
-form h1, h4 {
+h1, h4 {
    color: #7451eb;
 }
 
@@ -320,4 +320,17 @@ Verify
 #activeItem {
    border-bottom: red solid 3px;
    
+}
+
+/* Filter loans */
+caption {
+   background-color:hsla(113, 46%, 91%, 1);
+}
+
+.money {
+   text-align: right;
+}
+
+.rowColor {
+   background-color:hsla(113, 46%, 91%, .8);
 }

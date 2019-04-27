@@ -93,21 +93,27 @@ for (let i = 0; i < clients.length; i++) {
 const loanApplicants = [
 {
    clientID: 2,
-   amount: 850.00,
+   amount: 850,
    date: "02.13.2019 5:00",
    status: "current"
 },
 {
    clientID: 3,
-   amount: 550.00,
+   amount: 550,
    date: "02.19.2019 12:00",
-   status: ""
+   status: "paid"
 },
 {
    clientID: 1,
-   amount: 950.00,
+   amount: 950,
    date: "02.22.2019 8:00",
    status: "current"
+},
+{
+   clientID: 4,
+   amount: 950.00,
+   date: "02.22.2019 8:00",
+   status: ""
 }
 ];
 
@@ -117,8 +123,9 @@ for (let i = 0; i < loanApplicants.length; i++) {
    let rowColor = '';
    if (i % 2 != 0) rowColor = 'rowColor';
    
+   // allow decimal with .toFixed(2)
    listLoans += "<tr class=" + `${rowColor}` + "><td>" + getFullName(loanApplicants[i].clientID) + 
-             "</td><td>" + Number(loanApplicants[i].amount) + " USD" +
+             "</td><td class='money'>" + "$" + Number(loanApplicants[i].amount).toFixed(2) +
              "</td><td>" + loanApplicants[i].date + 
              "</td></tr>";
 }
@@ -143,28 +150,65 @@ for (let i = 0; i < currentLoans.length; i++) {
    let rowColor = '';
    if (i % 2 != 0) rowColor = 'rowColor';
    listCurrentLoans += "<tr class=" + `${rowColor}` + "><td>" + getFullName(currentLoans[i].clientID) + 
-             "</td><td>" + Number(currentLoans[i].amount) + " USD" +
+             "</td><td class='money'>" + "$" + Number(currentLoans[i].amount).toFixed(2) +
              "</td><td>" + currentLoans[i].date + 
              "</td></tr>";
 }
 
+const paidLoans = [];
 
-const current = document.getElementById("currentLoans");
+for (let i = 0; i < loanApplicants.length; i++) {
+   if (loanApplicants[i].status === "paid") {
+      paidLoans.push(loanApplicants[i]);
+      
+   }
+   
+}
+
+let listPaidLoans = "";
+
+for (let i = 0; i < paidLoans.length; i++) {
+   let rowColor = '';
+   if (i % 2 != 0) rowColor = 'rowColor';
+   listPaidLoans += "<tr class=" + `${rowColor}` + "><td>" + getFullName(paidLoans[i].clientID) + 
+             "</td><td class='money'>" + "$" + Number(paidLoans[i].amount).toFixed(2) + 
+             "</td><td>" + paidLoans[i].date + 
+             "</td></tr>";
+}
+
+
+// Get filter
 const all = document.getElementById("all");
+const current = document.getElementById("currentLoans");
+const paid = document.getElementById("paidLoans");
 
+// Then add listeners
 all.addEventListener("click", function () {
-   document.getElementById("listCurrentLoaners").id = "listLoaners";
+   if (document.getElementById("listCurrentLoaners")) {
+      document.getElementById("listCurrentLoaners").id = "listLoaners";
+   } else document.getElementById("listPaidLoaners").id = "listLoaners";
+
+   //document.getElementById("listCurrentLoaners").id = "listLoaners";
    document.getElementById("listLoaners").innerHTML = listLoans;
-   document.getElementById("numberLoans").innerHTML = loanApplicants.length + " loans (all).";
+   document.getElementById("numberLoans").innerHTML = "All Loans (" + loanApplicants.length + ").";
 });
 
 current.addEventListener("click", function () {
-   document.getElementById("listLoaners").id = "listCurrentLoaners";
+   if (document.getElementById("listLoaners")) {
+      document.getElementById("listLoaners").id = "listCurrentLoaners";
+   } else document.getElementById("listPaidLoaners").id = "listCurrentLoaners";
+   
    document.getElementById("listCurrentLoaners").innerHTML = listCurrentLoans;
-   document.getElementById("numberLoans").innerHTML = currentLoans.length + " current loans.";
+   document.getElementById("numberLoans").innerHTML = "Current loans (" + currentLoans.length + ").";
 }); 
 
-console.log(currentLoans);
+paid.addEventListener("click", function () {
+   if (document.getElementById("listLoaners")) {
+      document.getElementById("listLoaners").id = "listPaidLoaners";
+   } else document.getElementById("listCurrentLoaners").id = "listPaidLoaners";
 
+   document.getElementById("listPaidLoaners").innerHTML = listPaidLoans;
+   document.getElementById("numberLoans").innerHTML = "Repaid loans (" + paidLoans.length + ").";
+}); 
 
 

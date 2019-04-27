@@ -98,7 +98,10 @@ const loanApplicants = [
 let listLoans = "";
 
 for (let i = 0; i < loanApplicants.length; i++) {
-   listLoans += "<tr><td>" + getFullName(loanApplicants[i].clientID) + 
+   let rowColor = '';
+   if (i % 2 != 0) rowColor = 'rowColor';
+   
+   listLoans += "<tr class=" + `${rowColor}` + "><td>" + getFullName(loanApplicants[i].clientID) + 
              "</td><td>" + Number(loanApplicants[i].amount) + " USD" +
              "</td><td>" + loanApplicants[i].date + 
              "</td></tr>";
@@ -124,7 +127,9 @@ for (let i = 0; i < loanApplicants.length; i++) {
 let listCurrentLoans = "";
 
 for (let i = 0; i < currentLoans.length; i++) {
-   listCurrentLoans += "<tr><td>" + getFullName(currentLoans[i].clientID) + 
+   let rowColor = '';
+   if (i % 2 != 0) rowColor = 'rowColor';
+   listCurrentLoans += "<tr class=" + `${rowColor}` + "><td>" + getFullName(currentLoans[i].clientID) + 
              "</td><td>" + Number(currentLoans[i].amount) + " USD" +
              "</td><td>" + currentLoans[i].date + 
              "</td></tr>";

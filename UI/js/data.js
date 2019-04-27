@@ -25,6 +25,22 @@ const clients = [
 
 {
    id: 2,
+   fName : "Jean-Mari",
+   lName : "Kahola",
+   fullName : function() {
+      return this.fName + " " + this.lName;
+   },
+   phone : 08522452,
+   email :"patkav@g.rw",
+   address : {
+      city : "Kisangani",
+      home : "286, Mangobo",
+      office : "55, Kisangani"
+   }
+},
+
+{
+   id: 3,
    fName : "Patie",
    lName : "Kav",
    fullName : function() {
@@ -40,7 +56,7 @@ const clients = [
 },
 
 {
-   id: 3,
+   id: 4,
    fName : "Joyce",
    lName : "Dimoke",
    fullName : function() {
@@ -108,12 +124,9 @@ for (let i = 0; i < loanApplicants.length; i++) {
 }
 
 document.getElementById("listLoaners").innerHTML = listLoans;
+document.getElementById("numberLoans").innerHTML = loanApplicants.length + " loans (all).";
 
-/**
-* @TODO: return total of applications: all, current and paid
-*/
-
-// Current loans
+// View Current loans
 const currentLoans = [];
 
 for (let i = 0; i < loanApplicants.length; i++) {
@@ -135,17 +148,20 @@ for (let i = 0; i < currentLoans.length; i++) {
              "</td></tr>";
 }
 
+
 const current = document.getElementById("currentLoans");
 const all = document.getElementById("all");
 
 all.addEventListener("click", function () {
    document.getElementById("listCurrentLoaners").id = "listLoaners";
    document.getElementById("listLoaners").innerHTML = listLoans;
+   document.getElementById("numberLoans").innerHTML = loanApplicants.length + " loans (all).";
 });
 
 current.addEventListener("click", function () {
    document.getElementById("listLoaners").id = "listCurrentLoaners";
    document.getElementById("listCurrentLoaners").innerHTML = listCurrentLoans;
+   document.getElementById("numberLoans").innerHTML = currentLoans.length + " current loans.";
 }); 
 
 console.log(currentLoans);

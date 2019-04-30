@@ -146,7 +146,7 @@ span span {
 /*---------------------------------------
        FORM
 ---------------------------------------*/
-form h1, h4 {
+h1, h4 {
    color: #7451eb;
 }
 
@@ -231,6 +231,49 @@ footer {
    border: none;
 }
 
+
+/*-----------------------------
+      Loan application View
+-----------------------------*/
+.applicationDescription {
+   margin-top: 10px;
+   padding: 8px;
+   line-height: 28px;
+   width: 45%;
+   border: #7451eb 2px solid;
+   border-radius: 2px;
+}
+
+.applicationXWrapper div:first-child {
+   display: flex;
+   justify-content: space-between;
+   width: 45%;
+   margin-bottom: 15px;
+}
+
+#application-aproval {
+   display: flex;
+   justify-content: space-between;
+   width: 45%;
+   margin-top: 15px;
+}
+
+.approval {
+   width: 90px;
+   color: #FFFFFF;
+}
+
+.approval:last-of-type {
+   background: red;
+   border-color: red;
+   
+}
+
+.approval:first-of-type {
+   background: green;
+   border-color: green;
+}
+
 /*----------------------------
 Verify
 -----------------------------*/
@@ -277,4 +320,83 @@ Verify
 #activeItem {
    border-bottom: red solid 3px;
    
+}
+
+/* Filter loans */
+caption {
+   background-color:hsla(113, 46%, 91%, 1);
+}
+
+.money {
+   text-align: right;
+}
+
+.rowColor {
+   background-color:hsla(113, 46%, 91%, .8);
+}
+
+/* Post Loan */
+.form-bloc {
+   width: 100%;
+margin: auto;
+padding: 24px;
+max-width: 760px;
+background: #fff;
+border-radius: 2px;
+color: rgba(0, 0, 0, 0.92);
+/*border: 2px solid red;*/
+}
+
+.form-title {
+   font-size: 1rem;
+font-family: Montserrat;
+font-weight: 700;
+line-height: 1.625rem;
+margin-bottom: 16px;
+}
+
+.form-content {
+   font-size: .875rem;
+   position: relative;
+   color: rgba(0,0,0,.92);
+}
+
+.left-hand, .right-hand {
+   width: 50%;
+   float: left;
+   padding-left: 16px;
+   margin-bottom: 18px;
+}
+
+/*.right-hand {
+   width: 50%;
+   float: right;
+   padding-left: 16px;
+}
+*/
+.input {
+  /* border-bottom: 1px solid rgba(0, 0, 0, 0.92);*/
+   margin: 0;
+   margin-left: 0;
+}
+
+/*.input input {
+   max-width: inherit;
+   width: 100%;
+   line-height: 1.625rem;
+margin-bottom: 1px;
+border-radius: 0;
+
+border-bottom: 1px solid rgba(0, 0, 0, 0.92);
+}*/
+
+#fNameL {
+   max-width: inherit;
+   width: 100%;
+   line-height: 1.625rem;
+margin-bottom: 1px;
+border-radius: 0;
+border-bottom: 1px solid rgba(0, 0, 0, 0.92);
+padding: 0 !important;
+background: #fff;
 }

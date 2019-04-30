@@ -190,7 +190,7 @@ all.addEventListener("click", function () {
 
    //document.getElementById("listCurrentLoaners").id = "listLoaners";
    document.getElementById("listLoaners").innerHTML = listLoans;
-   document.getElementById("numberLoans").innerHTML = "All Loans (" + loanApplicants.length + ").";
+   document.getElementById("numberLoans").innerHTML = "All Loans (" + loanApplicants.length + ")";
 });
 
 current.addEventListener("click", function () {
@@ -199,7 +199,7 @@ current.addEventListener("click", function () {
    } else document.getElementById("listPaidLoaners").id = "listCurrentLoaners";
    
    document.getElementById("listCurrentLoaners").innerHTML = listCurrentLoans;
-   document.getElementById("numberLoans").innerHTML = "Current loans (" + currentLoans.length + ").";
+   document.getElementById("numberLoans").innerHTML = "Current loans (" + currentLoans.length + ")";
 }); 
 
 paid.addEventListener("click", function () {
@@ -208,7 +208,7 @@ paid.addEventListener("click", function () {
    } else document.getElementById("listCurrentLoaners").id = "listPaidLoaners";
 
    document.getElementById("listPaidLoaners").innerHTML = listPaidLoans;
-   document.getElementById("numberLoans").innerHTML = "Repaid loans (" + paidLoans.length + ").";
+   document.getElementById("numberLoans").innerHTML = "Repaid loans (" + paidLoans.length + ")";
 }); 
 
 

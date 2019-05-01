@@ -100,11 +100,15 @@ header a, #applyBtn a {
    
 }
 
-span span {
+.callToAction h1 {
+   color: #FFFFFF;
+}
+
+/*span span {
    background-color: rgb(0, 54, 104);
    box-shadow: rgb(0, 54, 104) 16px 0px 0px, rgb(0, 54, 104) -16px 0px 0px;
-   /*color: rgb(255, 255, 255);*/
-}
+   /*color: rgb(255, 255, 255);
+}*/
 
 .callToAction img {
    width: 368px;

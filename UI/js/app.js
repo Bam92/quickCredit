@@ -87,3 +87,12 @@ const loanAmount = document.getElementById("amount");
    });
 }
 
+/* Toggle between showing and hiding the navigation menu 
+links when the user clicks on the hamburger menu / bar icon */
+document.getElementById("hamburger").addEventListener("click", function (e) {
+   console.log("clic");
+   const navLinks = document.getElementById("navLinks");
+   if (/*navLinks.style.display == "block" ||*/ navLinks.style.display == "flex") navLinks.style.display == "none";
+   else navLinks.style.display == "flex";
+
+}); 

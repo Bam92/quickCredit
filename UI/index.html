@@ -5,18 +5,18 @@
    <title>Quick Credit | The new way to borrow</title>
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- Main content -->
-  <main class="mainContent" role="main">
-          
+
      <!-- Header -->
      <header>
+      <div class="container">
 
         <nav class="navbar" role="navigation">
           <div><a class="mainHeader_logo" href="#">Quick Credit</a></div>
-           <ul class="navLinks">
+           <ul id="navLinks">
               <!--<li class="navItem"><a href="#">Borrow</a></li>
               <li class="navItem"><a href="#">About Us</a></li>-->
               
@@ -24,34 +24,77 @@
               <li class="navItem sign"><a href="templates/signin.html">Sign In</a></li>
            </ul>
         </nav>
-        
+        <a href="#" id="hamburger">
+            <i class="fa fa-bars"></i>
+        </a>
+      </div>
      </header>
      
+     <!-- Main content -->
+  <main class="mainContent" role="main">
      <!-- Call to action -->
      <section class="callToAction">
       <div class="callToAction_wrapper">
-       <div class="callToAction_image_wrapper"><img src="images/bag-money.svg" alt="money"></div>
+       <div class="callToAction_image_wrapper"><img src="images/bag-money.svg" alt="money" role="img"></div>
        <div class="callToAction_description_wrapper">
-        <h1>
-        <span class="bckgTitle"></span> <span>The new way <br>to borrow </span>
+        <h1 id="homeTitle">
+        <span class="bckgTitle">The new way to borrow </span>
         </h1>
-        <p>At dolorum ex ea architecto et repellendus eum quia esse quam iusto! Excepturi ea quod error dicta optio fugit cupiditate accusantium? Ipsam.</p>
-        <div id="applyBtn">
+        <p>Our mission is to provide short term soft loans to individuals in order to solve problems of financial inclusion as a way to alleviate poverty and empower low
+            income earners.</p>
+         <!--p>We beleive in a world where evryone should have the possibility to borrow money in a short delay! Is this your case? We are 
+            there to help your dream comes true. Don't wait!
+         </p-->
+        <!--div id="applyBtn">
            <a href="templates/application.html">Apply</a>
+        </div-->
+        <a href="#sign-up"><button id="get-started">Get started</button></a>
         </div>
         </div>
-        </div>
-        
        
      </section>
      
+   </main>
+   <section id="auth-home">
+         <div class="form-container sign-up-container">
+               <form action="#" id="sign-up">
+                  <p class="form-title">Create your account</p>
+                                  
+                  <!--select name="cities" id="cities">
+                    <option value="" disabled>Select your city</option>
+                     <option value="kisangani">Kisangani</option>
+                     <option value="kinshasa">Kinshasa</option>
+                     <option value="goma">Goma</option>
+                     <option value="lubumbashi">Lubumbashi</option>
+                     <option value="bukavu">Bukavu</option>
+                     <option value="kalemie">Kalemie</option>
+                     <option value="bunia">Bunia</option>
+                     <option value="matadi">Matadi</option>
+                     <option value="mbandaka">Mbandaka</option>
+                  </select-->
+                  
+                  <input type="text" placeholder="First name" id="firstName" required>
+                  <div id="helpFirstName" class="inputError"></div>
+                  <input type="text" placeholder="Last name" id="lastName" required>
+                  <div id="helpLastName" class="inputError"></div>
+                  <input type="tel" placeholder="Phone" id="phone" required>
+                  <div id="helpPhone" class="inputError"></div>
+                  <input type="email" placeholder="you@domaine.com" id="email" required>
+                  <div id="helpEmail" class="inputError"></div>
+                  <input type="password" placeholder="password" id="password">
+                  <div id="helpPassword" class="inputError"></div>
+                  
+                  <input type="submit" value="Sign Up">
+                        
+               </form>
+            </div> 
+   </section>
+
      <!-- Footer -->
      <footer>
         <p>Code and design: <a href="www.abelmbula.com">Abel</a></p>
      </footer>
-  </main>
-  
-  <script type="application/javascript" src="js/t.js"></script>
-  <script src="../js/app.js"></script>
+
+  <script src="js/app.js"></script>
 </body>
 </html>

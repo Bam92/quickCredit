@@ -75,7 +75,7 @@
    });
 */
 // Application
-if (document.getElementById("amount") != null) {
+if (document.getElementById("amount") !== null) {
 const loanAmount = document.getElementById("amount");
    
    loanAmount.addEventListener("blur", function(e) {
@@ -89,11 +89,11 @@ const loanAmount = document.getElementById("amount");
 
 /* Toggle between showing and hiding the navigation menu 
 links when the user clicks on the hamburger menu / bar icon */
-document.getElementById("hamburger").addEventListener("click", function (e) {
+document.getElementById("hamburger").addEventListener("click", (e) => {
    console.log("clic");
    const navLinks = document.getElementById("navLinks");
-   if (/*navLinks.style.display == "block" ||*/ navLinks.style.display == "flex") navLinks.style.display == "none";
-   else navLinks.style.display == "flex";
+   if (avLinks.style.display = "none") navLinks.style.display = "block";
+   else if (navLinks.style.display = "block") navLinks.style.display = "none";
 
 }); 
 
@@ -104,7 +104,7 @@ const container = document.getElementById('auth-home');
 
 signUpButton.addEventListener('click', () => {
     container.classList.add('right-panel-active');
-    console.log('clic')
+    console.log('click')
 });
 
 signInButton.addEventListener('click', () => {

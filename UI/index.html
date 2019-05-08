@@ -23,10 +23,10 @@
               <li class="navItem sign" id="signup"><a href="templates/signup.html">Sign Up</a></li>
               <li class="navItem sign"><a href="templates/signin.html">Sign In</a></li>
            </ul>
-        </nav>
-        <a href="#" id="hamburger">
-            <i class="fa fa-bars"></i>
-        </a>
+         </nav>
+         <a href="#" id="hamburger">
+               <i class="fa fa-bars"></i>
+         </a>
       </div>
      </header>
      
@@ -52,27 +52,21 @@
         </div>
         </div>
        
-     </section>
+      </section>
      
    </main>
    <section id="auth-home">
          <div class="form-container sign-up-container">
                <form action="#" id="sign-up">
-                  <p class="form-title">Create your account</p>
-                                  
-                  <!--select name="cities" id="cities">
-                    <option value="" disabled>Select your city</option>
-                     <option value="kisangani">Kisangani</option>
-                     <option value="kinshasa">Kinshasa</option>
-                     <option value="goma">Goma</option>
-                     <option value="lubumbashi">Lubumbashi</option>
-                     <option value="bukavu">Bukavu</option>
-                     <option value="kalemie">Kalemie</option>
-                     <option value="bunia">Bunia</option>
-                     <option value="matadi">Matadi</option>
-                     <option value="mbandaka">Mbandaka</option>
-                  </select-->
-                  
+                  <h1>Create your account</h1>
+                     <div class="social-container">
+                           <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                           <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                           <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                       </div>
+                       <span>or use your email for registration</span>
+   
+                 
                   <input type="text" placeholder="First name" id="firstName" required>
                   <div id="helpFirstName" class="inputError"></div>
                   <input type="text" placeholder="Last name" id="lastName" required>
@@ -88,12 +82,48 @@
                         
                </form>
             </div> 
+            <div class="form-container sign-in-container">
+                  <form action="#">
+                        <h1>Sign In to your account</h1>
+                        <div class="social-container">
+                              <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                              <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                              <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                          </div>
+                          <span>or use your account</span>
+                        
+                        <input type="email" placeholder="you@domaine.com" id="email" required>
+                        <div id="helpEmail" class="inputError"></div>
+                        <input type="password" placeholder="password" id="password" required>
+                        <div id="helpPassword" class="inputError"></div>
+                        <a href="#">Forgot your password?</a>
+
+                        <input type="submit" value="Sign In">
+                              
+                     </form>
+           </div>
+           <div class="overlay-container">
+               <div class="overlay">
+                  <div class="overlay-panel overlay-left">
+                        <h1>Welcome Back!</h1>
+                        <p>
+                           To apply for a loan please sign in with your personal info
+                        </p>
+                        <button class="ghost" id="signIn">Sign In</button>
+                  </div>
+                  <div class="overlay-panel overlay-right">
+                        <h1>Hello, Friend!</h1>
+                        <p>Enter your personal details and start your journey with us</p>
+                        <button class="ghost" id="signUp">Sign Up</button>
+                  </div>
+               </div>
+            </div>
    </section>
 
-     <!-- Footer -->
-     <footer>
-        <p>Code and design: <a href="www.abelmbula.com">Abel</a></p>
-     </footer>
+   <!-- Footer -->
+   <footer>
+      <p>Code and design: <a href="www.abelmbula.com">Abel</a></p>
+   </footer>
 
   <script src="js/app.js"></script>
 </body>

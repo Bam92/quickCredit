@@ -32,7 +32,7 @@ describe('/POST /api/v1/auth/signup', () => {
       });*/
       .then((res) => {
         expect(res).to.have.status(200);
-        expect(res).to.be.json;
+        //expect(res).to.be.json;
         expect(res.body).to.be.an('array');
         expect(res.body).length.to.be.eql(2);
       });
@@ -53,12 +53,12 @@ describe('/POST /api/v1/auth/signup', () => {
   });
 });
 
-/*describe('API Endpoint /auth/signin', () => {
+describe('API Endpoint /api/v1/auth/signin', () => {
   const data = {
     email: 'patikav@g.cn',
     password: 'Patie123',
   };
-  const endPointPost = '/auth/signin';
+  const endPointPost = '/api/v1/auth/signin';
 
   it('Should sign a new user in', () => {
     return chai.request(app)
@@ -66,7 +66,7 @@ describe('/POST /api/v1/auth/signup', () => {
       .send(data)
       .then((res) => {
         expect(res).to.have.status(200);
-        expect(res).to.be.json;
+        //expect(res).to.be.json;
       //expect(res.body).to.be.an('object');
       //expect(res.body).to.be.a('array');
       //expect(res.body).length.to.be.eql(2);
@@ -87,4 +87,3 @@ describe('/POST /api/v1/auth/signup', () => {
       });
   });
 });
-*/

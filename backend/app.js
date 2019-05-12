@@ -14,12 +14,14 @@ app.post('/api/v1/auth/signup', (req, res) => {
       status: 404,
       message: 'Email is required',
     });
-  } else if (!req.body.firstN) {
+  }
+  if (!req.body.firstN) {
     return res.status(404).send({
       status: 404,
       message: 'First name is required',
     });
-  } else if (!req.body.lastN) {
+  }
+  if (!req.body.lastN) {
     return res.status(404).send({
       status: 404,
       message: 'Last name is required',
@@ -47,12 +49,13 @@ app.post('/api/v1/auth/signin', (req, res) => {
       status: 404,
       message: 'Email is required',
     });
-  } else if (!req.body.password) {
+  }
+  if (!req.body.password) {
     return res.status(404).send({
-       status: 404,
-       message: 'Password is required',
+      status: 404,
+      message: 'Password is required',
     });
-  }  
+  }
   const data = {
     email: req.body.email,
     password: 'Patie123',
@@ -60,6 +63,7 @@ app.post('/api/v1/auth/signin', (req, res) => {
   return res.status(200).send({
     status: 200,
     message: 'User signed in successfully',
+    db,
   });
 });
 

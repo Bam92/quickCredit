@@ -89,13 +89,13 @@ const loanAmount = document.getElementById("amount");
 
 /* Toggle between showing and hiding the navigation menu 
 links when the user clicks on the hamburger menu / bar icon */
-document.getElementById("hamburger").addEventListener("click", (e) => {
+/*document.getElementById("hamburger").addEventListener("click", (e) => {
    console.log("clic");
    const navLinks = document.getElementById("navLinks");
    if (avLinks.style.display = "none") navLinks.style.display = "block";
    else if (navLinks.style.display = "block") navLinks.style.display = "none";
 
-}); 
+}); */
 
 /* Home page */
 const signUpButton = document.getElementById('signUp');

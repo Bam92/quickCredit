@@ -95,6 +95,10 @@ body, html {
    color: #FFFFFF;
 }
 
+.container header {
+   text-align: center;
+}
+
 /*---------------------------------------
          CONTAINER
 ----------------------------------------*/
@@ -171,6 +175,7 @@ footer {
    position: fixed;
    bottom: 0;
    width: 100%;
+   /*margin-top: 15px;*/
 }
 
 /* -------------------------------
@@ -185,6 +190,7 @@ footer {
    position: fixed;
    bottom: 0;
    width: 100%;
+   /*margin-top: 15px;*/
 }
 .dropdown-content {
    display: none;
@@ -547,7 +553,7 @@ form button.ghost {
 }
 
 form {
-   background-color: #ffffff;
+  /* background-color: #ffffff;*/
    display: flex;
    align-items: center;
    justify-content: center;

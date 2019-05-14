@@ -51,29 +51,14 @@
       //else if (!regEmail.test(e.target.value)) emailHelp.textContent = "Invalid email address";
    });
    }
-// Sign In
-   //const email = document.getElementById("email");
-  // const password = document.getElementById("password");
-      
- /*  email.addEventListener("blur", function(e) {
-      // must be a string as this you@domain.com
-      const emailHelp = document.getElementById("helpEmail");
-      const regEmail = /.+@.+\..+/;
-      
-      if (e.target.value === "") emailHelp.textContent = "Field cannot be empty"; 
-      else if (!regEmail.test(e.target.value)) emailHelp.textContent = "Invalid email address";
-   });
-   
-   password.addEventListener("blur", function(e) {
-      // must be a string as this you@domain.com
-      const passwordHelp = document.getElementById("helpPassword");
-      const regPassword = /.+@.+\..+/;
-      
-      if (e.target.value === "") passwordHelp.textContent = "Field cannot be empty"; 
-      else if (e.target.value.length < 9) passwordHelp.textContent = "Field must contain at least 9 charactors";
-      //else if (!regEmail.test(e.target.value)) emailHelp.textContent = "Invalid email address";
-   });
-*/
+
+const submitBtn = document.getElementById('submitBtn');
+submitBtn.addEventListener('click', (e) => {
+   e.preventDefault();
+   window.location.replace('./templates/usrAccount.html');
+   return false;
+});
+
 // Application
 if (document.getElementById("amount") !== null) {
 const loanAmount = document.getElementById("amount");
@@ -86,16 +71,6 @@ const loanAmount = document.getElementById("amount");
       else if (e.target.value < 20) loanAmountHelp.textContent = "Field must contain at least $ 20.00";
    });
 }
-
-/* Toggle between showing and hiding the navigation menu 
-links when the user clicks on the hamburger menu / bar icon */
-/*document.getElementById("hamburger").addEventListener("click", (e) => {
-   console.log("clic");
-   const navLinks = document.getElementById("navLinks");
-   if (avLinks.style.display = "none") navLinks.style.display = "block";
-   else if (navLinks.style.display = "block") navLinks.style.display = "none";
-
-}); */
 
 /* Home page */
 const signUpButton = document.getElementById('signUp');

@@ -1,20 +1,13 @@
 /* eslint-env es6 */
 /* eslint-disable */
 
-console.log("test");
-
-/* eslint-env es6 */
-/* eslint-disable */
-
 // Sign Up
-  
-
    if (document.getElementById("firstName", "lastName", "phone", "email", "password") != null) {
        const firstName = document.getElementById("firstName");
        const lastName = document.getElementById("lastName");
-   const phone = document.getElementById("phone");
-   const email = document.getElementById("email");
-   const password = document.getElementById("password");
+      const phone = document.getElementById("phone");
+      const email = document.getElementById("email");
+      const password = document.getElementById("password");
 
    firstName.addEventListener("blur", function(e) {
       const firstNameHelp = document.getElementById("helpFirstName");
@@ -58,31 +51,16 @@ console.log("test");
       //else if (!regEmail.test(e.target.value)) emailHelp.textContent = "Invalid email address";
    });
    }
-// Sign In
-   //const email = document.getElementById("email");
-  // const password = document.getElementById("password");
-      
- /*  email.addEventListener("blur", function(e) {
-      // must be a string as this you@domain.com
-      const emailHelp = document.getElementById("helpEmail");
-      const regEmail = /.+@.+\..+/;
-      
-      if (e.target.value === "") emailHelp.textContent = "Field cannot be empty"; 
-      else if (!regEmail.test(e.target.value)) emailHelp.textContent = "Invalid email address";
-   });
-   
-   password.addEventListener("blur", function(e) {
-      // must be a string as this you@domain.com
-      const passwordHelp = document.getElementById("helpPassword");
-      const regPassword = /.+@.+\..+/;
-      
-      if (e.target.value === "") passwordHelp.textContent = "Field cannot be empty"; 
-      else if (e.target.value.length < 9) passwordHelp.textContent = "Field must contain at least 9 charactors";
-      //else if (!regEmail.test(e.target.value)) emailHelp.textContent = "Invalid email address";
-   });
-*/
+
+const submitBtn = document.getElementById('submitBtn');
+submitBtn.addEventListener('click', (e) => {
+   e.preventDefault();
+   window.location.replace('./templates/usrAccount.html');
+   return false;
+});
+
 // Application
-if (document.getElementById("amount") != null) {
+if (document.getElementById("amount") !== null) {
 const loanAmount = document.getElementById("amount");
    
    loanAmount.addEventListener("blur", function(e) {
@@ -93,3 +71,17 @@ const loanAmount = document.getElementById("amount");
       else if (e.target.value < 20) loanAmountHelp.textContent = "Field must contain at least $ 20.00";
    });
 }
+
+/* Home page */
+const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('auth-home');
+
+signUpButton.addEventListener('click', () => {
+    container.classList.add('right-panel-active');
+    console.log('click')
+});
+
+signInButton.addEventListener('click', () => {
+    container.classList.remove('right-panel-active');
+});

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Loan Application | All</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css">   
+   <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+      <main id="main-application">
+            <header>
+                <div class="container">
+
+                <nav class="navbar" role="navigation">
+                  <div><a class="mainHeader_logo" href="../index.html">Quick Credit</a></div>
+                   <ul class="navLinks">
+                      <li class="navItem"><a href="#" title="Verify clients">Clients</a></li>
+                      <li class="navItem" id="activeItem"><a href="#" title="Browse all applications">Applications</a></li>
+                      <li class="navItem"><a href="#" title="Browse all loans">Loans</a></li>
+                      <li class="userProfile">
+                       <a href="" title="Hello, admin"><img src="../images/avatar.png" alt="borrower"></a> 
+                      </li>
+                   </ul>
+                   <div class="dropdown-content hidden" id="DropdownProfile">
+                   <ul>
+                      <li><a href="#"><strong>Admin</strong></a></li>
+                      <li><a class="" href="#"> Profile </a></li>
+                      <li><a class="" href="#"> Logout</a></li>            
+                   </ul>
+
+                   </div>
+                </nav>
+                </div>
+             </header>
+
+          <div class="container">
+             <h1>Loan Application       
+             </h1>
+             <!--<select name="status" id="status">
+                  <option value="all">All</option>
+                  <option value="current">Current</option>
+               </select>-->
+             <div id="loanFilters">
+               <span>Browse by:</span>
+               <button id="all">All</button>
+               <button id="currentLoans">Current</button>
+               <button id="paidLoans">Repaid</button>
+             </div>
+             
+             <div class="wrapper applicationXWrapper">
+                 <table>
+                    <caption id="numberLoans"></caption>
+                     <thead>
+                         <th>Client name</th>
+                         <th>Amount</th>
+                         <th>Date</th>
+                     </thead>
+                     <tbody id="listLoaners">
+                         
+                     </tbody>
+                 </table>
+             </div>
+             
+             </div>
+
+         <footer id="footer-application">
+           <p>Code and design: <a href="www.abelmbula.com">Abel</a></p>
+         </footer> 
+
+        </main>
+
+ <script src="../js/data.js"></script>
+ <scrip type="text/javascript" src="../js/app.js"></scrip>
+
+</body>
+</html>

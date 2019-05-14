@@ -6,29 +6,10 @@
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css">   
    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-     <!-- Header -->
-     <header>
-      <div class="container">
-
-        <nav class="navbar" role="navigation">
-          <div><a class="mainHeader_logo" href="#">Quick Credit</a></div>
-           <ul id="navLinks">
-              <!--<li class="navItem"><a href="#">Borrow</a></li>
-              <li class="navItem"><a href="#">About Us</a></li>-->
-              
-              <li class="navItem sign" id="signup"><a href="templates/signup.html">Sign Up</a></li>
-              <li class="navItem sign"><a href="templates/signin.html">Sign In</a></li>
-           </ul>
-         </nav>
-         <a href="#" id="hamburger">
-               <i class="fa fa-bars"></i>
-         </a>
-      </div>
-     </header>
      
      <!-- Main content -->
   <main class="mainContent" role="main">
@@ -38,17 +19,16 @@
        <div class="callToAction_image_wrapper"><img src="images/bag-money.svg" alt="money" role="img"></div>
        <div class="callToAction_description_wrapper">
         <h1 id="homeTitle">
-        <span class="bckgTitle">The new way to borrow </span>
+           <span><a class="mainHeader_logo" href="#">Quick Credit</a></span> <br>
+           <span class="bckgTitle">The new way to borrow </span>
         </h1>
         <p>Our mission is to provide short term soft loans to individuals in order to solve problems of financial inclusion as a way to alleviate poverty and empower low
             income earners.</p>
-         <!--p>We beleive in a world where evryone should have the possibility to borrow money in a short delay! Is this your case? We are 
+         <p>We beleive in a world where evryone should have the possibility to borrow money in a short delay! Is this your case? We are 
             there to help your dream comes true. Don't wait!
-         </p-->
-        <!--div id="applyBtn">
-           <a href="templates/application.html">Apply</a>
-        </div-->
-        <a href="#sign-up"><button id="get-started">Get started</button></a>
+         </p>
+   
+        <a href="#sign-up"><button id="get-started" class="white-btn">Get started</button></a>
         </div>
         </div>
        
@@ -60,12 +40,11 @@
                <form action="#" id="sign-up">
                   <h1>Create your account</h1>
                      <div class="social-container">
-                           <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                           <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                           <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                           <a href="#" class="social"><i class="fab fa fa-facebook-f"></i></a>
+                           <a href="#" class="social"><i class="fab fa fa-google-plus"></i></a>
+                           <a href="#" class="social"><i class="fab fa fa-linkedin"></i></a>
                        </div>
                        <span>or use your email for registration</span>
-   
                  
                   <input type="text" placeholder="First name" id="firstName" required>
                   <div id="helpFirstName" class="inputError"></div>
@@ -86,10 +65,10 @@
                   <form action="#">
                         <h1>Sign In to your account</h1>
                         <div class="social-container">
-                              <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                              <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                              <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-                          </div>
+                              <a href="#" class="social"><i class="fab fa fa-facebook"></i></a>
+                              <a href="#" class="social"><i class="fab fa fa-google-plus"></i></a>
+                              <a href="#" class="social"><i class="fab fa fa-linkedin"></i></a>
+                        </div>
                           <span>or use your account</span>
                         
                         <input type="email" placeholder="you@domaine.com" id="email" required>
@@ -98,9 +77,9 @@
                         <div id="helpPassword" class="inputError"></div>
                         <a href="#">Forgot your password?</a>
 
-                        <input type="submit" value="Sign In">
+                        <input type="submit" value="Sign In" id="submitBtn">
                               
-                     </form>
+                  </form>
            </div>
            <div class="overlay-container">
                <div class="overlay">
@@ -109,12 +88,12 @@
                         <p>
                            To apply for a loan please sign in with your personal info
                         </p>
-                        <button class="ghost" id="signIn">Sign In</button>
+                        <button class="ghost white-btn" id="signIn">Sign In</button>
                   </div>
                   <div class="overlay-panel overlay-right">
                         <h1>Hello, Friend!</h1>
                         <p>Enter your personal details and start your journey with us</p>
-                        <button class="ghost" id="signUp">Sign Up</button>
+                        <button class="ghost white-btn" id="signUp">Sign Up</button>
                   </div>
                </div>
             </div>

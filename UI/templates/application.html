@@ -11,7 +11,7 @@
 </head>
 <body>
  <main id="main-application">
-    <header>
+    <!--header>
         <div class="container">
 
         <nav class="navbar" role="navigation">
@@ -34,21 +34,40 @@
            </div>
         </nav>
         </div>
-     </header>
+     </header-->
+
+     <div class="container">
+        <header>
+           <a href="./usrAccount.html"><button class="color-btn" id="usr-dashboard">Dashboard</button></a>
+           <a href="../index.html"><button class="color-btn">Sign out</button></a>
+      </header>
+      <div class="container-title">
+         
+         <h1>Hello, Patience Kavira!</h1>
+      </div>
+      <div class="container-content">
+         <div class="content-title">
+            <h2>To apply for a loan, fill this form</h2>
+         </div>
+         <div class="content-action">
+            <form action="#">               
+               <input type="text" placeholder="Amout in USD" id="amount" required>
+               <div class="inputError" id="helpAmount"></div>
+               <textarea name="description" id="" cols="30" rows="10" placeholder="description" required></textarea>
+               <div class="inputError"></div>
+               
+               <input type="submit" value="Apply">
+                     
+            </form>
+            <!--div class="usr-sign-out">
+               <p>or</p>
+               <p><a href="../index.html"><button class="color-btn">Sign out</button></a></p>
+            </div-->
+         </div>
+      </div>
+     </div>
      
-  <div class="form-container apply-container container">
-   <form action="#">
-      <h1>Apply for a loan</h1>
-      
-      <input type="text" placeholder="Amout in USD" id="amount" required>
-      <div class="inputError" id="helpAmount"></div>
-      <textarea name="description" id="" cols="30" rows="10" placeholder="description" required></textarea>
-      <div class="inputError"></div>
-      
-      <input type="submit" value="Apply">
-            
-   </form>
-</div>
+  </div>
 </main>
  <footer id="footer-application">
    <p>Code and design: <a href="www.abelmbula.com">Abel</a></p>

@@ -1,7 +1,7 @@
 const chai = require('chai');
 const chaiHttp = require('chai-http');
 const expect = require('chai').expect;
-const app = require('../app');
+const app = require('../../app');
 
 const should = chai.should();
 
@@ -53,12 +53,12 @@ describe('/POST /api/v1/auth/signup', () => {
   });
 });
 
-/*describe('API Endpoint /auth/signin', () => {
+describe('API Endpoint /api/v1/auth/signin', () => {
   const data = {
     email: 'patikav@g.cn',
     password: 'Patie123',
   };
-  const endPointPost = '/auth/signin';
+  const endPointPost = '/api/v1//auth/signin';
 
   it('Should sign a new user in', () => {
     return chai.request(app)
@@ -87,4 +87,3 @@ describe('/POST /api/v1/auth/signup', () => {
       });
   });
 });
-*/

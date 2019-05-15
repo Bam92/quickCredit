@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "mocha --timeout 10000"
+    "test": "backend/test mocha --timeout 10000"
   },
   "author": "Abel",
   "license": "MIT",

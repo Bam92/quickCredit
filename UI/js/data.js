@@ -1,5 +1,5 @@
 /*
-* Concert Seat
+* Quick Credit
 * @author Abel Lifaefi Mbula
 */
 

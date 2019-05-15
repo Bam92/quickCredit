@@ -5,11 +5,13 @@
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <title>Verify client</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css">   
    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
       <main id="main-application">
-            <header>
+            <!--header>
                 <div class="container">
         
                 <nav class="navbar" role="navigation">
@@ -32,13 +34,20 @@
                    </div>
                 </nav>
                 </div>
-             </header>
+             </header-->
              
           <div class="container">
-             <h1>Verify Client</h1>
-             <div id="verifyTip"><small><em>
-                Tip: Mark the client as verified if both home and work address are confirmed
-             </em></small></div>
+               <header>
+                     <a href="./adminDash.html"><button class="color-btn" id="usr-dashboard">Dashboard</button></a>
+                     <a href="../index.html"><button class="color-btn">Sign out</button></a>
+                </header>
+                <div class="container-title">
+                     <h1>Verify Client</h1>
+                     <div id="verifyTip"><small><em>
+                           Tip: Mark the client as verified if both home and work address are confirmed
+                        </em></small></div>
+                     </div>
+             
              <div class="clientsWrapper">
                   <div class="clientImage">
                      <img src="../images/avatar.png" alt="avatar">
@@ -167,8 +176,7 @@
         
         </main>
 
- <scrip type="text/javascript" src="../js/main.js"></scrip> <!--// why if i call my js file main it does not function?-->
- <script src="../js/data.js"></script>
+<script src="../js/data.js"></script>
  
 </body>
 </html>

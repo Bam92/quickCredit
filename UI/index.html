@@ -43,8 +43,8 @@
                            <a href="#" class="social"><i class="fab fa fa-facebook-f"></i></a>
                            <a href="#" class="social"><i class="fab fa fa-google-plus"></i></a>
                            <a href="#" class="social"><i class="fab fa fa-linkedin"></i></a>
-                       </div>
-                       <span>or use your email for registration</span>
+                     </div>
+                     <span>or use your email for registration</span>
                  
                   <input type="text" placeholder="First name" id="firstName" required>
                   <div id="helpFirstName" class="inputError"></div>
@@ -69,17 +69,52 @@
                               <a href="#" class="social"><i class="fab fa fa-google-plus"></i></a>
                               <a href="#" class="social"><i class="fab fa fa-linkedin"></i></a>
                         </div>
-                          <span>or use your account</span>
+                        <span>or use your account</span>
                         
                         <input type="email" placeholder="you@domaine.com" id="email" required>
                         <div id="helpEmail" class="inputError"></div>
                         <input type="password" placeholder="password" id="password" required>
                         <div id="helpPassword" class="inputError"></div>
                         <a href="#">Forgot your password?</a>
+                        <a href="./templates/adminSignIn.html">Are you admin? Click here</a>
 
                         <input type="submit" value="Sign In" id="submitBtn">
                               
                   </form>
+
+                  <!--The modal-->
+                  <div id="modal" class="modal">
+                     <div class="modal-content">
+                         <!-- Modal content -->
+                        <div class="modal-content">
+                           <div class="modal-header">
+                              <span class="close">&times;</span>
+                              <h2>Admin Login</h2>
+                           </div>
+                           <div class="modal-body">
+                                 <form action="#">
+                                       <h1>Sign In to your account</h1>
+                                       <div class="social-container">
+                                             <a href="#" class="social"><i class="fab fa fa-facebook"></i></a>
+                                             <a href="#" class="social"><i class="fab fa fa-google-plus"></i></a>
+                                             <a href="#" class="social"><i class="fab fa fa-linkedin"></i></a>
+                                       </div>
+                                         <span>or use your account</span>
+                                       
+                                       <input type="email" placeholder="you@domaine.com" id="email" required>
+                                       <div id="helpEmail" class="inputError"></div>
+                                       <input type="password" placeholder="password" id="password" required>
+                                       <div id="helpPassword" class="inputError"></div>
+                                       <a href="#">Forgot your password?</a>
+                                       <p id="adminLogin">Are you admin? Click here</p>
+               
+                                       <input type="submit" value="Sign In" id="submitBtn">
+                                             
+                                 </form>
+                           </div>
+                           </div>
+                     </div>
+                  </div>
            </div>
            <div class="overlay-container">
                <div class="overlay">

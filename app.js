@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const db = require('./data/users');
+const db = require('./backend/data/users');
 
 const app = express();
 
@@ -8,6 +8,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// POST /auth/signup
 app.post('/api/v1/auth/signup', (req, res) => {
   if (!req.body.email) {
     return res.status(404).send({
@@ -38,6 +39,31 @@ app.post('/api/v1/auth/signup', (req, res) => {
         message: 'User created successfully',
         data,
       });
+});
+
+// Sign in endpoint
+app.post('/api/v1/auth/signin', (req, res) => {
+  if (!req.body.email) {
+    return res.status(404).send({
+      status: 404,
+      message: 'Email is required',
+    });
+  }
+  if (!req.body.password) {
+    return res.status(404).send({
+      status: 404,
+      message: 'Password is required',
+    });
+  }
+  const data = {
+    email: req.body.email,
+    password: 'Patie123',
+  };
+  return res.status(200).send({
+    status: 200,
+    message: 'User signed in successfully',
+    db,
+  });
 });
 
 module.exports = app;

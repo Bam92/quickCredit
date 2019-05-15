@@ -5,9 +5,9 @@
    if (document.getElementById("firstName", "lastName", "phone", "email", "password") != null) {
        const firstName = document.getElementById("firstName");
        const lastName = document.getElementById("lastName");
-      const phone = document.getElementById("phone");
-      const email = document.getElementById("email");
-      const password = document.getElementById("password");
+       const phone = document.getElementById("phone");
+       const email = document.getElementById("email");
+       const password = document.getElementById("password");
 
    firstName.addEventListener("blur", function(e) {
       const firstNameHelp = document.getElementById("helpFirstName");
@@ -24,7 +24,7 @@
    });
    
    phone.addEventListener("blur", function(e) {
-      // must be a string as this you@domain.com
+      // must be a string formated as this you@domain.com
       const phonelHelp = document.getElementById("helpPhone");
       const regEmail = /.+@.+\..+/;
       
@@ -52,12 +52,27 @@
    });
    }
 
+   // User sign in
 const submitBtn = document.getElementById('submitBtn');
-submitBtn.addEventListener('click', (e) => {
-   e.preventDefault();
-   window.location.replace('./templates/usrAccount.html');
-   return false;
-});
+if(submitBtn) {
+   submitBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.location.replace('./templates/usrAccount.html');
+      return false;
+   });
+}
+
+
+// Admin sign in
+const adminCheck = document.getElementById('adminCheck');
+
+if(adminCheck) {
+   adminCheck.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.location.replace('./adminDash.html');
+      return false;
+   });
+}
 
 // Application
 if (document.getElementById("amount") !== null) {
@@ -77,11 +92,15 @@ const signUpButton = document.getElementById('signUp');
 const signInButton = document.getElementById('signIn');
 const container = document.getElementById('auth-home');
 
-signUpButton.addEventListener('click', () => {
-    container.classList.add('right-panel-active');
-    console.log('click')
-});
+if(signUpButton) {
+   signUpButton.addEventListener('click', () => {
+      container.classList.add('right-panel-active');
+      console.log('click')
+  });
+}
 
-signInButton.addEventListener('click', () => {
-    container.classList.remove('right-panel-active');
-});
+if(signInButton) {
+   signInButton.addEventListener('click', () => {
+      container.classList.remove('right-panel-active');
+  });  
+}

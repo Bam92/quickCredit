@@ -85,3 +85,15 @@ signUpButton.addEventListener('click', () => {
 signInButton.addEventListener('click', () => {
     container.classList.remove('right-panel-active');
 });
+
+const modal = document.getElementById('modal');
+const modalTrigger = document.getElementById('adminLogin');
+
+modalTrigger.addEventListener('click', () => {
+   modal.style.display = 'block';
+});
+
+// close the modal when the user clicks anywhere
+window.addEventListener('click', (e) => {
+   if(e.target === modal) modal.style.display = none
+});

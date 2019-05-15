@@ -219,6 +219,13 @@ footer {
 
 
 /*-----------------------------
+      Admin login
+-----------------------------*/
+.modal {
+   display: none;
+}
+
+/*-----------------------------
       Loan application View
 -----------------------------*/
 .applicationDescription {

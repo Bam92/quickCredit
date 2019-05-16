@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Quick Credit | The new way to borrow</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css">   
+   <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+     
+     <!-- Main content -->
+  <main class="mainContent" role="main">
+     <!-- Call to action -->
+     <section class="callToAction">
+      <div class="callToAction_wrapper">
+       <div class="callToAction_image_wrapper"><img src="images/bag-money.svg" alt="money" role="img"></div>
+       <div class="callToAction_description_wrapper">
+        <h1 id="homeTitle">
+           <span><a class="mainHeader_logo" href="#">Quick Credit</a></span> <br>
+           <span class="bckgTitle">The new way to borrow </span>
+        </h1>
+        <p>Our mission is to provide short term soft loans to individuals in order to solve problems of financial inclusion as a way to alleviate poverty and empower low
+            income earners.</p>
+         <p>We beleive in a world where evryone should have the possibility to borrow money in a short delay! Is this your case? We are 
+            there to help your dream comes true. Don't wait!
+         </p>
+   
+        <a href="#sign-up"><button id="get-started">Get started</button></a>
+        </div>
+        </div>
+       
+      </section>
+     
+   </main>
+   <section id="auth-home">
+         <div class="form-container sign-up-container">
+               <form action="#" id="sign-up">
+                  <h1>Create your account</h1>
+                     <div class="social-container">
+                           <a href="#" class="social"><i class="fab fa fa-facebook-f"></i></a>
+                           <a href="#" class="social"><i class="fab fa fa-google-plus"></i></a>
+                           <a href="#" class="social"><i class="fab fa fa-linkedin"></i></a>
+                       </div>
+                       <span>or use your email for registration</span>
+                 
+                  <input type="text" placeholder="First name" id="firstName" required>
+                  <div id="helpFirstName" class="inputError"></div>
+                  <input type="text" placeholder="Last name" id="lastName" required>
+                  <div id="helpLastName" class="inputError"></div>
+                  <input type="tel" placeholder="Phone" id="phone" required>
+                  <div id="helpPhone" class="inputError"></div>
+                  <input type="email" placeholder="you@domaine.com" id="email" required>
+                  <div id="helpEmail" class="inputError"></div>
+                  <input type="password" placeholder="password" id="password">
+                  <div id="helpPassword" class="inputError"></div>
+                  
+                  <input type="submit" value="Sign Up">
+                        
+               </form>
+            </div> 
+            <div class="form-container sign-in-container">
+                  <form>
+                        <h1>Sign In to your account</h1>
+                        <div class="social-container">
+                              <a href="#" class="social"><i class="fab fa fa-facebook"></i></a>
+                              <a href="#" class="social"><i class="fab fa fa-google-plus"></i></a>
+                              <a href="#" class="social"><i class="fab fa fa-linkedin"></i></a>
+                        </div>
+                          <span>or use your account</span>
+                        
+                        <input type="email" name="email" placeholder="you@domaine.com" id="email" required>
+                        <div id="helpEmail" class="inputError"></div>
+                        <input type="password" name="password" placeholder="password" id="password" required>
+                        <div id="helpPassword" class="inputError"></div>
+                        <div id="usr-category">
+                           <div id="user-login">
+                              <input type="radio" name="usr-login" value="User"><label for="user"> User</label>
+                           </div>
+                           <div id="admin-login">
+                              <input type="radio" name="usr-login" value="Admin"><label for="admin"> Admin</label>
+                           </div>
+                        </div>
+                        
+                        <a href="#">Forgot your password?</a>
+
+                        <input type="submit" value="Sign In">
+                              
+                  </form>
+           </div>
+           <div class="overlay-container">
+               <div class="overlay">
+                  <div class="overlay-panel overlay-left">
+                        <h1>Welcome Back!</h1>
+                        <p>
+                           To apply for a loan please sign in with your personal info
+                        </p>
+                        <button class="ghost" id="signIn">Sign In</button>
+                  </div>
+                  <div class="overlay-panel overlay-right">
+                        <h1>Hello, Friend!</h1>
+                        <p>Enter your personal details and start your journey with us</p>
+                        <button class="ghost" id="signUp">Sign Up</button>
+                  </div>
+               </div>
+            </div>
+   </section>
+
+   <!-- Footer -->
+   <footer>
+      <p>Code and design: <a href="www.abelmbula.com">Abel</a></p>
+   </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

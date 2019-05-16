@@ -1,15 +1,42 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+import swaggerJSDoc from 'swagger-jsdoc';
+
 import db from './backend/data/users';
+import signup from './backend/routes/index.routes'
 
 const app = express();
+
+// swagger definition
+const swaggerDefinition = {
+  info: {
+    title: 'Node Swagger API',
+    version: '1.0.0',
+    description: 'Demonstrating how to describe a RESTful API with Swagger',
+  },
+  host: 'localhost:3000',
+  basePath: '/',
+};
+
+// options for the swagger docs
+var options = {
+  // import swaggerDefinitions
+  swaggerDefinition: swaggerDefinition,
+  // path to the API docs
+  apis: ['./routes/*.js'],
+};
+
+// initialize swagger-jsdoc
+var swaggerSpec = swaggerJSDoc(options);
+
 
 // Parse incoming requests data
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use('/api/v1/auth', signup)
 
 // POST /auth/signup
-app.post('/api/v1/auth/signup', (req, res) => {
+/*app.post('/api/v1/auth/signup', (req, res) => {
   if (!req.body.email) {
     return res.status(404).send({
       status: 404,
@@ -40,7 +67,7 @@ app.post('/api/v1/auth/signup', (req, res) => {
         data,
       });
 });
-
+*/
 // Sign in endpoint
 app.post('/api/v1/auth/signin', (req, res) => {
   if (!req.body.email) {

@@ -3,9 +3,6 @@
 * @author Abel Lifaefi Mbula
 */
 
-/* eslint-env es6 */
-/* eslint-disable */
-
 const clients = [
    {
    id: 1,

@@ -21,7 +21,7 @@
    });
    
    phone.addEventListener("blur", function(e) {
-      // must be a string as this you@domain.com
+      // must be a string formated as this you@domain.com
       const phonelHelp = document.getElementById("helpPhone");
       const regEmail = /.+@.+\..+/;
       
@@ -34,7 +34,7 @@
       const emailHelp = document.getElementById("helpEmail");
       const regEmail = /.+@.+\..+/;
       
-      if (e.target.value === "") emailHelp.textContent = "Field cannot be empty"; 
+      if (e.target.value === '') emailHelp.textContent = "Field cannot be empty"; 
       else if (!regEmail.test(e.target.value)) emailHelp.textContent = "Invalid email address";
    });
    
@@ -45,32 +45,30 @@
       
       if (e.target.value === '') passwordHelp.textContent = "Field cannot be empty"; 
       else if (e.target.value.length < 9) passwordHelp.textContent = "Field must contain at least 9 charactors";
-      //else if (!regEmail.test(e.target.value)) emailHelp.textContent = "Invalid email address";
    });
    }
-// Sign In
-   //const email = document.getElementById("email");
-  // const password = document.getElementById("password");
-      
- /*  email.addEventListener("blur", function(e) {
-      // must be a string as this you@domain.com
-      const emailHelp = document.getElementById("helpEmail");
-      const regEmail = /.+@.+\..+/;
-      
-      if (e.target.value === "") emailHelp.textContent = "Field cannot be empty"; 
-      else if (!regEmail.test(e.target.value)) emailHelp.textContent = "Invalid email address";
+
+   // User sign in
+const submitBtn = document.getElementById('submitBtn');
+if(submitBtn) {
+   submitBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.location.replace('./templates/usrAccount.html');
+      return false;
    });
-   
-   password.addEventListener("blur", function(e) {
-      // must be a string as this you@domain.com
-      const passwordHelp = document.getElementById("helpPassword");
-      const regPassword = /.+@.+\..+/;
-      
-      if (e.target.value === "") passwordHelp.textContent = "Field cannot be empty"; 
-      else if (e.target.value.length < 9) passwordHelp.textContent = "Field must contain at least 9 charactors";
-      //else if (!regEmail.test(e.target.value)) emailHelp.textContent = "Invalid email address";
+}
+
+// Admin sign in
+const adminCheck = document.getElementById('adminCheck');
+
+if(adminCheck) {
+   adminCheck.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.location.replace('./adminDash.html');
+      return false;
    });
-*/
+}
+
 // Application
 if (document.getElementById("amount") !== null) {
 const loanAmount = document.getElementById("amount");
@@ -92,7 +90,6 @@ const container = document.getElementById('auth-home');
 if (signUpButton || signInButton) {
    signUpButton.addEventListener('click', () => {
       container.classList.add('right-panel-active');
-      console.log('click')
   });
   
   signInButton.addEventListener('click', () => {
@@ -104,7 +101,6 @@ if (signUpButton || signInButton) {
 const form = document.querySelector('form');
 
 if (form) {
-   console.log('form is there')
    form.addEventListener('submit', (e) => {
       const login = form.elements.email.value;
       const password = form.elements.password.value;

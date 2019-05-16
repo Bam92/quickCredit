@@ -11,43 +11,27 @@
 </head>
 <body>
       <main id="main-application">
-            <header>
-                <div class="container">
-
-                <nav class="navbar" role="navigation">
-                  <div><a class="mainHeader_logo" href="../index.html">Quick Credit</a></div>
-                   <ul class="navLinks">
-                      <li class="navItem"><a href="#" title="Verify clients">Clients</a></li>
-                      <li class="navItem" id="activeItem"><a href="#" title="Browse all applications">Applications</a></li>
-                      <li class="navItem"><a href="#" title="Browse all loans">Loans</a></li>
-                      <li class="userProfile">
-                       <a href="" title="Hello, admin"><img src="../images/avatar.png" alt="borrower"></a> 
-                      </li>
-                   </ul>
-                   <div class="dropdown-content hidden" id="DropdownProfile">
-                   <ul>
-                      <li><a href="#"><strong>Admin</strong></a></li>
-                      <li><a class="" href="#"> Profile </a></li>
-                      <li><a class="" href="#"> Logout</a></li>            
-                   </ul>
-
-                   </div>
-                </nav>
-                </div>
-             </header>
 
           <div class="container">
-             <h1>Loan Application       
-             </h1>
-             <!--<select name="status" id="status">
-                  <option value="all">All</option>
-                  <option value="current">Current</option>
-               </select>-->
+               <header>
+                     <a href="./adminDash.html"><button class="color-btn" id="usr-dashboard">Dashboard</button></a>
+                     <a href="../index.html"><button class="color-btn">Sign out</button></a>
+                </header>
+                <div class="container-title">
+                   
+                   <h1>Hello, Admin!</h1>
+                </div>
+                <div class="container-content">
+                     <div class="content-title">
+                           <h2>List of Loan Applications</h2>
+                     </div>
+                     <div class="content-action">
+
              <div id="loanFilters">
                <span>Browse by:</span>
-               <button id="all">All</button>
-               <button id="currentLoans">Current</button>
-               <button id="paidLoans">Repaid</button>
+               <button id="all" class="color-btn">All</button>
+               <button id="currentLoans" class="color-btn">Current</button>
+               <button id="paidLoans" class="color-btn">Repaid</button>
              </div>
              
              <div class="wrapper applicationXWrapper">
@@ -63,14 +47,15 @@
                      </tbody>
                  </table>
              </div>
-             
              </div>
+            </div>
+         </div>
+      </main>
+      <footer id="footer-application">
+         <p>Code and design: <a href="www.abelmbula.com">Abel</a></p>
+      </footer> 
 
-         <footer id="footer-application">
-           <p>Code and design: <a href="www.abelmbula.com">Abel</a></p>
-         </footer> 
-
-        </main>
+        
 
  <script src="../js/data.js"></script>
  <scrip type="text/javascript" src="../js/app.js"></scrip>

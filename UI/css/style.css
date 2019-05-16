@@ -6,7 +6,6 @@ body, html {
    padding: 0;
    font: 18px/1.5 "Dosis", sans-serif;
    font-weight: 400;
-   /*font-size: 1rem;*/
    background: #fafafa;
 }
 
@@ -17,9 +16,6 @@ body, html {
 .container{
     display: block;
     position: relative;
-    width: 80% !important;
-    /*margin-left: 10% !important;
-    margin-right: 10% !important;*/
     margin: auto;
     height: 100% !important;
 }
@@ -34,8 +30,6 @@ body, html {
    
    background-color: #7451eb;
    background-size: cover;
-   /*min-height: 100%;*/
-   /*min-width: 100%;*/
    width: 100%;
    min-height: 550px;
    padding-top: 100px;
@@ -57,16 +51,12 @@ body, html {
    flex-direction: row;
    justify-content: space-between;
    color: #fff;
-   /*align-items: center;*/
-   /*text-align: center;*/
    max-width: 80%;
    margin: 0 auto;
-   /*padding-top: 20px;*/
-   /*padding-bottom: 20px;*/
    
 }
 
-#get-started, .ghost {
+.white-btn, .ghost {
    border: 1px solid #fff;
    border-radius: 4px;
    background-color: #fff;
@@ -74,13 +64,14 @@ body, html {
    padding: 10px 15px;
    margin-top: 25px;
    margin-bottom: 25px;
+   color: #7451eb;
 }
 
-#get-started:hover {
-   box-shadow: 0px 0 3px #fff;
-   /*border-bottom: 2px solid red;*/
-   color: #7451eb;
-   font-weight: bold;
+.white-btn:hover {
+   color: #fff;
+   border: 1px solid #fff;
+   border-radius: 4px;
+   background-color: #7451eb;
 }
 
 .content-action button {
@@ -100,9 +91,13 @@ body, html {
 }
 
 .content-action {
-   /*display: flex;
-   justify-content: space-between;*/
    text-align: center;
+}
+
+.container header {
+   text-align: center;
+   margin-top: 40px;
+   margin-bottom: 15px;
 }
 
 /*---------------------------------------
@@ -117,13 +112,8 @@ h1, h4 {
 .form-container {
    display: flex;
    align-items: center;
-   justify-content: center;
    flex-direction: column;
-   /*padding: 0 50px;*/
    height: 100%;
-   /*background: #FFFFFF;*/
-   /*margin: 0;*/
-   /*margin: -20px 0 50px;*/
 }
 
 input, select, textarea {
@@ -131,15 +121,13 @@ input, select, textarea {
 	border: none;
 	padding: 12px 15px;
 	margin: 8px 0;
-	width: 100%;
 }
 
-input[type="submit"] {
+input[type="submit"], .color-btn {
    background: #7451eb;
    letter-spacing: 1px;
    text-transform: uppercase;
    color: #FFFFFF;
-   /*width: 100%;*/
    border-radius: 5px;
    border: 1px solid #7451eb;
    letter-spacing: 1px;
@@ -147,7 +135,7 @@ input[type="submit"] {
    font-weight: bold;
 }
 
-input[type="submit"]:hover {
+input[type="submit"]:hover, .color-btn:hover {
    background: #FFFFFF;
    color: #7451eb;
    box-shadow: 0px 0 3px #fff;
@@ -162,11 +150,15 @@ input[type="submit"]:hover {
 ---------------------------------*/
 footer {
    background: #fafafa;
-   /*color: #ffffff;*/
    display: flex;
    justify-content: center;
    bottom: 0;
    width: 100%;
+}
+
+#footer-color {
+   background-color: #7451eb;
+   color: #fff;
 }
 
 /* -------------------------------
@@ -181,6 +173,7 @@ footer {
    bottom: 0;
    width: 100%;
 }
+
 .dropdown-content {
    display: none;
    position: absolute;
@@ -201,15 +194,19 @@ footer {
    border: none;
 }
 
-
 /*-----------------------------
       Loan application View
 -----------------------------*/
+.applicationXWrapper {
+   width: 750px;
+   margin: auto;
+   text-align: left;
+}
+
 .applicationDescription {
    margin-top: 10px;
    padding: 8px;
    line-height: 28px;
-   width: 45%;
    border: #7451eb 2px solid;
    border-radius: 2px;
 }
@@ -217,15 +214,14 @@ footer {
 .applicationXWrapper div:first-child {
    display: flex;
    justify-content: space-between;
-   width: 45%;
    margin-bottom: 15px;
 }
 
 #application-aproval {
    display: flex;
    justify-content: space-between;
-   width: 45%;
    margin-top: 15px;
+   margin-bottom: 15px;
 }
 
 .approval {
@@ -236,7 +232,12 @@ footer {
 .approval:last-of-type {
    background: red;
    border-color: red;
-   
+}
+
+.approval:last-of-type:hover {
+   background: #fff;
+   border-color: red;
+   color: red;
 }
 
 .approval:first-of-type {
@@ -244,16 +245,22 @@ footer {
    border-color: green;
 }
 
+.approval:first-of-type:hover {
+   background: #fff;
+   border-color: green;
+   color: green;
+}
+
 /*----------------------------
-Verify
+          VERIFY
 -----------------------------*/
 #verifyTip {
    margin-bottom: 20px;
-  /* border: #7451eb 2px solid;*/
 }
 
 .clientsWrapper {
    display: flex;
+   justify-content: center;
    margin-bottom: 20px;
 }
 
@@ -305,6 +312,10 @@ caption {
    background-color:hsla(113, 46%, 91%, .8);
 }
 
+#loanFilters {
+   margin-bottom: 15px;
+}
+
 /* Post Loan */
 .form-bloc {
    width: 100%;
@@ -314,7 +325,6 @@ caption {
    background: #fff;
    border-radius: 2px;
    color: rgba(0, 0, 0, 0.92);
-   /*border: 2px solid red;*/
 }
 
 .form-title {
@@ -338,18 +348,6 @@ caption {
    margin-bottom: 18px;
 }
 
-/*.right-hand {
-   width: 50%;
-   float: right;
-   padding-left: 16px;
-}
-*/
-.input {
-  /* border-bottom: 1px solid rgba(0, 0, 0, 0.92);*/
-   margin: 0;
-   margin-left: 0;
-}
-
 #fNameL {
    max-width: inherit;
    width: 100%;
@@ -366,16 +364,9 @@ caption {
 ---------------------------------------------------*/
 #auth-home {
    background-color: #ffffff;
-   /*border-radius: 10px;*/
-   /*box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);*/
    position: relative;
-   overflow: hidden;
-   /*width: 768px;*/
    max-width: 80%;
-   /*min-height: 480px;*/
    min-height: 500px;
-   /*border: red solid 2px;*/
-   /*margin-top: 10px;*/
    margin: auto;
 }
 
@@ -441,8 +432,6 @@ caption {
 
 .overlay {
    background: #7451eb;
-   /*background: -webkit-linear-gradient(to right, #ff4b2b, #ff416c);
-   background: linear-gradient(to right, #ff4b2b, #ff416c);*/
    background-repeat: no-repeat;
    background-size: cover;
    background-position: 0 0;
@@ -542,7 +531,6 @@ form button.ghost {
 }
 
 form {
-   background-color: #ffffff;
    display: flex;
    align-items: center;
    justify-content: center;
@@ -550,14 +538,6 @@ form {
    padding: 0 50px;
    height: 100%;
    text-align: center;
-}
-
-input {
-   background-color: #eee;
-   border: none;
-   padding: 12px 15px;
-   margin: 8px 0;
-   width: 100%;
 }
 
 .social-container {
@@ -588,6 +568,54 @@ input {
 
 
 /*----------------------------------------
+       Loan Repayment history
+-----------------------------------------*/
+#loan_history {
+   display: flex;
+   justify-content: space-between;
+}
+
+#loanSummary {
+   width: 30%;
+   margin-right: 5px;
+}
+
+.init_summary {
+   display: flex;
+   justify-content: space-between;
+
+
+   margin-bottom: 15px;
+}
+
+.last_summary {
+   display: flex;
+   flex-direction: column;
+}
+
+.last_summary div {
+   margin-bottom: 15px;
+}
+
+.loan_history_details div {
+   box-sizing: border-box;
+
+}
+
+.flex-table {
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: space-between;
+   border-left: solid 1px #d9d9d9;
+   transition: 0.5s;
+}
+
+table {
+   width: 500px;
+   margin: auto;
+}
+
+/*----------------------------------------
             Media query
 -----------------------------------------*/
 @media only screen and (min-width: 200px) and (max-width: 640px) {
@@ -595,9 +623,7 @@ input {
       display: flex;
       flex-direction: column;
       max-width: 100%;
-      /*justify-content: center;*/
       text-align: center;
-      /*align-content: center;*/
    }
 
    .callToAction img {
@@ -609,19 +635,4 @@ input {
    
       height: 550px;
    }
-
-
-   /* Style the hamburger menu */
-   #hamburger {
-      /*background: black;*/
-      display: block;
-      position: absolute;
-      right: 0;
-      top: 0;
-   }
-
-   #navLinks { 
-      display: none;
-   }
-
 }

@@ -5,3 +5,5 @@ node_js:
 cache:
   directories:
     - "node_modules"
+
+CODECOV_TOKEN="651a28d8-c7eb-4093-acf9-6b824c4f14f8"

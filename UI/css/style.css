@@ -575,6 +575,18 @@ input {
    width: 40px;
 }
 
+#usr-category {
+   display: flex;
+   justify-content: space-between;
+}
+
+#user-login, #admin-login {
+   display: flex;
+   margin-right: 15px;
+}
+
+
+
 /*----------------------------------------
             Media query
 -----------------------------------------*/

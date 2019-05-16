@@ -3,9 +3,6 @@
 * @author Abel Lifaefi Mbula
 */
 
-/* eslint-env es6 */
-/* eslint-disable */
-
 const clients = [
    {
    id: 1,
@@ -72,22 +69,17 @@ const clients = [
 }
 ];
 
-function getFullName (id) {
-   for (let i = 0; i < clients.length; i++) {
+const getFullName = (id) => {
+   for (let i = 0; i < clients.length; i += 1) {
       if (clients[i].id === id) return clients[i].fullName();      
    }
 }
 
-let output = "";
+let output = '';
 
-for (let i = 0; i < clients.length; i++) {
-   output += "<tr><td>" + clients[i].fName + " " + clients[i].lName + 
-             /*"</td><td>" + clients.address.home +
-             "</td><td>" + clients.address.office*/ + 
-             "</td><td>Verified</td></tr>";
+for (let i = 0; i < clients.length; i += 1) {
+   output += `<tr><td>${clients[i].fName} ${clients[i].lName} </td><td>Verified</td></tr>`;
 }
-
-//document.getElementById("clientsList").innerHTML = output;
 
 // Loans applications view
 const loanApplicants = [
@@ -157,7 +149,7 @@ for (let i = 0; i < currentLoans.length; i++) {
 
 const paidLoans = [];
 
-for (let i = 0; i < loanApplicants.length; i++) {
+for (let i = 0; i < loanApplicants.length; i += 1) {
    if (loanApplicants[i].status === "paid") {
       paidLoans.push(loanApplicants[i]);
       
@@ -165,9 +157,9 @@ for (let i = 0; i < loanApplicants.length; i++) {
    
 }
 
-let listPaidLoans = "";
+let listPaidLoans = '';
 
-for (let i = 0; i < paidLoans.length; i++) {
+for (let i = 0; i < paidLoans.length; i += 1) {
    let rowColor = '';
    if (i % 2 != 0) rowColor = 'rowColor';
    listPaidLoans += "<tr class=" + `${rowColor}` + "><td>" + getFullName(paidLoans[i].clientID) + 

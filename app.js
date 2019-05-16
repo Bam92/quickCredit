@@ -3,7 +3,7 @@ import bodyParser from 'body-parser';
 import swaggerJSDoc from 'swagger-jsdoc';
 
 import db from './backend/data/users';
-import signup from './backend/routes/index.routes'
+import signup from './backend/routes/index.routes';
 
 const app = express();
 
@@ -33,7 +33,9 @@ var swaggerSpec = swaggerJSDoc(options);
 // Parse incoming requests data
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use('/api/v1/auth', signup)
+
+// Routes
+app.use('/api/v1/auth', signup);
 
 // POST /auth/signup
 /*app.post('/api/v1/auth/signup', (req, res) => {

@@ -1,19 +1,18 @@
-const chai = require('chai');
-const chaiHttp = require('chai-http');
-const expect = require('chai').expect;
-const app = require('../../app');
+import chai from 'chai';
+import chaiHttp from 'chai-http';
+import app from '../../app';
 
-const should = chai.should();
+const expect = chai.expect;
 
 chai.use(chaiHttp);
 
-describe('test', () => {
+describe('Test Travis-ci', () => {
   it('should return a string', () => {
     expect('ci with travis').to.equal('ci with travis');
   });
 });
 
-describe('/POST /api/v1/auth/signup', () => {
+describe('Sign up a user /api/v1/auth/signup', () => {
   const data = {
     email: 'patikav@g.cn',
     firstN: 'Fidele',

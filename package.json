@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js --exec babel-node --presets babel-preset-env",
-    "test": "mocha backend/test --timeout 10000"
+    "test": "mocha backend/test --require babel-core/register --timeout 10000"
   },
   "author": "Abel",
   "license": "MIT",

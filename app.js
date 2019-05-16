@@ -1,6 +1,6 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const db = require('./backend/data/users');
+import express from 'express';
+import bodyParser from 'body-parser';
+import db from './backend/data/users';
 
 const app = express();
 

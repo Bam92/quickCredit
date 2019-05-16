@@ -364,9 +364,16 @@ caption {
 ---------------------------------------------------*/
 #auth-home {
    background-color: #ffffff;
+   /*border-radius: 10px;*/
+   /*box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);*/
    position: relative;
+   overflow: hidden;
+   /*width: 768px;*/
    max-width: 80%;
+   /*min-height: 480px;*/
    min-height: 500px;
+   /*border: red solid 2px;*/
+   /*margin-top: 10px;*/
    margin: auto;
 }
 
@@ -432,6 +439,8 @@ caption {
 
 .overlay {
    background: #7451eb;
+   /*background: -webkit-linear-gradient(to right, #ff4b2b, #ff416c);
+   background: linear-gradient(to right, #ff4b2b, #ff416c);*/
    background-repeat: no-repeat;
    background-size: cover;
    background-position: 0 0;
@@ -531,6 +540,7 @@ form button.ghost {
 }
 
 form {
+   background-color: #ffffff;
    display: flex;
    align-items: center;
    justify-content: center;
@@ -538,6 +548,14 @@ form {
    padding: 0 50px;
    height: 100%;
    text-align: center;
+}
+
+input {
+   background-color: #eee;
+   border: none;
+   padding: 12px 15px;
+   margin: 8px 0;
+   width: 100%;
 }
 
 .social-container {
@@ -564,7 +582,6 @@ form {
    display: flex;
    margin-right: 15px;
 }
-
 
 
 /*----------------------------------------

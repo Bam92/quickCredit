@@ -1,6 +1,3 @@
-/* eslint-env es6 */
-/* eslint-disable */
-
 // Sign Up
    if (document.getElementById("firstName", "lastName", "phone", "email", "password") != null) {
        const firstName = document.getElementById("firstName");
@@ -12,7 +9,7 @@
    firstName.addEventListener("blur", function(e) {
       const firstNameHelp = document.getElementById("helpFirstName");
 
-      if (e.target.value === "") firstNameHelp.textContent = "Field cannot be empty";      
+      if (e.target.value === '') firstNameHelp.textContent = "Field cannot be empty";      
       if (e.target.value.length === 1) firstNameHelp.textContent = "Field must contain at least 2 letters";
    });
    
@@ -37,7 +34,7 @@
       const emailHelp = document.getElementById("helpEmail");
       const regEmail = /.+@.+\..+/;
       
-      if (e.target.value === "") emailHelp.textContent = "Field cannot be empty"; 
+      if (e.target.value === '') emailHelp.textContent = "Field cannot be empty"; 
       else if (!regEmail.test(e.target.value)) emailHelp.textContent = "Invalid email address";
    });
    
@@ -46,9 +43,8 @@
       const passwordHelp = document.getElementById("helpPassword");
       const regPassword = /.+@.+\..+/;
       
-      if (e.target.value === "") passwordHelp.textContent = "Field cannot be empty"; 
+      if (e.target.value === '') passwordHelp.textContent = "Field cannot be empty"; 
       else if (e.target.value.length < 9) passwordHelp.textContent = "Field must contain at least 9 charactors";
-      //else if (!regEmail.test(e.target.value)) emailHelp.textContent = "Invalid email address";
    });
    }
 
@@ -61,7 +57,6 @@ if(submitBtn) {
       return false;
    });
 }
-
 
 // Admin sign in
 const adminCheck = document.getElementById('adminCheck');
@@ -81,7 +76,7 @@ const loanAmount = document.getElementById("amount");
    loanAmount.addEventListener("blur", function(e) {
       const loanAmountHelp = document.getElementById("helpAmount");
 
-      if (e.target.value === "") loanAmountHelp.textContent = "Field cannot be empty";
+      if (e.target.value === '') loanAmountHelp.textContent = "Field cannot be empty";
       else if (isNaN(e.target.value) === true) loanAmountHelp.textContent = "Field cannot contain a string";      
       else if (e.target.value < 20) loanAmountHelp.textContent = "Field must contain at least $ 20.00";
    });
@@ -92,15 +87,37 @@ const signUpButton = document.getElementById('signUp');
 const signInButton = document.getElementById('signIn');
 const container = document.getElementById('auth-home');
 
-if(signUpButton) {
+if (signUpButton || signInButton) {
    signUpButton.addEventListener('click', () => {
       container.classList.add('right-panel-active');
-      console.log('click')
+  });
+  
+  signInButton.addEventListener('click', () => {
+      container.classList.remove('right-panel-active');
   });
 }
 
-if(signInButton) {
-   signInButton.addEventListener('click', () => {
-      container.classList.remove('right-panel-active');
-  });  
+/* Form submission */
+const form = document.querySelector('form');
+
+if (form) {
+   form.addEventListener('submit', (e) => {
+      const login = form.elements.email.value;
+      const password = form.elements.password.value;
+      const usrCategoy = form.elements.usrLogin.value;
+      //console.log(usrCategoy);
+
+      if (login !== null && password !== null && usrCategoy !== null) {
+         if (usrCategoy === 'User') {
+            e.preventDefault();
+            window.location.replace('./templates/usrAccount.html');
+            return false;
+
+         } else if (usrCategoy === 'Admin') {
+            e.preventDefault();
+            window.location.replace('./adminDash.html');
+            return false;
+         }
+      }
+   });
 }

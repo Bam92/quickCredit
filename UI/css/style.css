@@ -548,7 +548,7 @@ form button.ghost {
 }
 
 form {
-   /*background-color: #ffffff;*/
+   background-color: #ffffff;
    display: flex;
    align-items: center;
    justify-content: center;
@@ -590,7 +590,6 @@ input {
    display: flex;
    margin-right: 15px;
 }
-
 
 /*----------------------------------------
        Loan Repayment history

@@ -12,46 +12,6 @@ describe('Test Travis-ci', () => {
   });
 });
 
-describe('Sign up a user /api/v1/auth/signup', () => {
-  const data = {
-    email: 'patikav@g.cn',
-    firstN: 'Fidele',
-    lastN: 'Mbula',
-    //password: 'Patie123',
-  };
-  const endPointPost = '/api/v1/auth/signup';
-
-  it('Should create a new user', () => {
-    chai.request(app)
-      .post(endPointPost)
-      .send(data)
-      /*.end((res) => {
-        res.should.have.status(200);
-        res.body.should.be.a('object');
-      });*/
-      .then((res) => {
-        expect(res).to.have.status(200);
-        //expect(res).to.be.json();
-        //expect(res.body).to.be.an('array');
-        //expect(res.body).length.to.be.eql(2);
-      });
-  });
-
-  // POST Bad request
-  /*it('Should return a bad request', () => {
-    return chai.request(app)
-      .post(endPointPost)
-      .type('form')
-      .send(data)
-      .then((res) => {
-        throw new Error('Invalid content type!');
-      })
-      .catch((err) => {
-        expect(err).to.have.status(404);
-      });
-  });*/
-});
-
 describe('API Endpoint /api/v1/auth/signin', () => {
   const data = {
     email: 'patikav@g.cn',
@@ -65,8 +25,9 @@ describe('API Endpoint /api/v1/auth/signin', () => {
       .send(data)
       .then((res) => {
         expect(res).to.have.status(200);
-        //expect(res.body).to.be.json();
-        //expect(res.body).to.be.an('object');
+
+        //expect(res).to.be.json;
+      //expect(res.body).to.be.an('object');
       //expect(res.body).to.be.a('array');
       //expect(res.body).length.to.be.eql(2);
       });

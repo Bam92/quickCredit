@@ -48,26 +48,16 @@
    });
    }
 
-   // User sign in
-const submitBtn = document.getElementById('submitBtn');
-if(submitBtn) {
-   submitBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      window.location.replace('./templates/usrAccount.html');
-      return false;
-   });
-}
+   const userCategory = document.getElementsByName('usr-login');
+   
+   for(let i = 0; i < userCategory.length; i += 1) {
+  userCategory[i].addEventListener('change', (e) => {
+         console.log(e.target.value);
+    if (e.target.value === 'Admin') window.location.replace('./templates/adminDash.html');
+         else if (e.target.value === 'User') window.location.replace('./templates/usrAccount.html');
+      });
 
-// Admin sign in
-const adminCheck = document.getElementById('adminCheck');
-
-if(adminCheck) {
-   adminCheck.addEventListener('click', (e) => {
-      e.preventDefault();
-      window.location.replace('./adminDash.html');
-      return false;
-   });
-}
+   }
 
 // Application
 if (document.getElementById("amount") !== null) {

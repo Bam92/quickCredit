@@ -36,40 +36,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Routes
 app.use('/api/v1/auth', signup);
+//app.use('/api/v1/auth', signin);
 
-// POST /auth/signup
-/*app.post('/api/v1/auth/signup', (req, res) => {
-  if (!req.body.email) {
-    return res.status(404).send({
-      status: 404,
-      message: 'Email is required',
-    });
-  } else if (!req.body.firstN) {
-    return res.status(404).send({
-      status: 404,
-      message: 'First name is required',
-    });
-  } else if (!req.body.lastN) {
-    return res.status(404).send({
-      status: 404,
-      message: 'Last name is required',
-    });
-  } 
-  const data = {
-        id: db.length + 1,
-        email: req.body.email,
-        firstN: req.body.firstN,
-        lastN: req.body.lastN,
-        password: 'Patie123',
-      };
-      db.push(data);
-      return res.status(200).send({
-        status: 200,
-        message: 'User created successfully',
-        data,
-      });
-});
-*/
 // Sign in endpoint
 app.post('/api/v1/auth/signin', (req, res) => {
   if (!req.body.email) {
@@ -86,13 +54,23 @@ app.post('/api/v1/auth/signin', (req, res) => {
   }
   const data = {
     email: req.body.email,
-    password: 'Patie123',
+    password: req.body.password,
   };
+  if (data.email === db[0].email && data.password === db[0].password) {
   return res.status(200).send({
     status: 200,
     message: 'User signed in successfully',
-    db,
+    data,
+    
   });
+  console.log(data.email + db.email)
+} else {
+  return res.status(404).send({
+    status: 404,
+    message: 'Password or email not recognized',
+  });
+
+}
 });
 
 module.exports = app;

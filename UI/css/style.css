@@ -92,6 +92,8 @@ body, html {
 
 .content-action {
    text-align: center;
+   margin: auto;
+   width: 500px;
 }
 
 .container header {
@@ -120,7 +122,8 @@ input, select, textarea {
 	background-color: #eee;
 	border: none;
 	padding: 12px 15px;
-	margin: 8px 0;
+   margin: 8px 0;
+   width: 100%;
 }
 
 input[type="submit"], .color-btn {
@@ -540,7 +543,7 @@ form button.ghost {
 }
 
 form {
-   background-color: #ffffff;
+   /*background-color: #ffffff;*/
    display: flex;
    align-items: center;
    justify-content: center;

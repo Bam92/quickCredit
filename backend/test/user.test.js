@@ -18,7 +18,7 @@ describe('User sign up', () => {
   const endPointPost = '/api/v1/auth/signup';
 
   it('Should return a 200 response', () => {
-    return chai.request('http://localhost:3000')
+    return chai.request('app')
       .post(endPointPost)
       .send(data)
       .then((res) => {
@@ -37,6 +37,28 @@ describe('User sign up', () => {
         expect(res.body.firstName).to.not.equal(null);
         expect(res.body).to.have.property('lastName');
         expect(res.body.lastName).to.not.equal(null);
+      });
+  });
+});
+
+describe('User sign in', () => {
+  const data = {
+    email: 'patikav@g.cn',
+    password: 'Patie123',
+  };
+  const endPointPost = '/api/v1/auth/signin';
+
+  it('Should sign a new user in', () => {
+    return chai.request(app)
+      .post(endPointPost)
+      .send(data)
+      .then((res) => {
+        expect(res).to.have.status(200);
+
+        //expect(res).to.be.json;
+      //expect(res.body).to.be.an('object');
+      //expect(res.body).to.be.a('array');
+      //expect(res.body).length.to.be.eql(2);
       });
   });
 });

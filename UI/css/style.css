@@ -86,12 +86,18 @@ body, html {
 /*---------------------------------------
          CONTAINER
 ----------------------------------------*/
+main {
+   margin-top: 30px;
+   margin-bottom: 30px;
+}
 .container-title, .content-title {
    text-align: center;
 }
 
 .content-action {
    text-align: center;
+   margin: auto;
+   width: 750px;
 }
 
 .container header {
@@ -99,6 +105,8 @@ body, html {
    margin-top: 40px;
    margin-bottom: 15px;
 }
+
+#verify-container {margin-bottom: 80px;}
 
 /*---------------------------------------
        FORM
@@ -120,7 +128,8 @@ input, select, textarea {
 	background-color: #eee;
 	border: none;
 	padding: 12px 15px;
-	margin: 8px 0;
+   margin: 8px 0;
+   width: 100%;
 }
 
 input[type="submit"], .color-btn {
@@ -172,6 +181,7 @@ footer {
    justify-content: center;
    bottom: 0;
    width: 100%;
+   position: fixed;
 }
 
 .dropdown-content {
@@ -539,8 +549,9 @@ form button.ghost {
    border-color: #ffffff;
 }
 
+.home-form {background: #FFFFFF; }
 form {
-   background-color: #ffffff;
+   /*background-color: #ffffff;*/
    display: flex;
    align-items: center;
    justify-content: center;
@@ -556,6 +567,11 @@ input {
    padding: 12px 15px;
    margin: 8px 0;
    width: 100%;
+}
+
+#postLoanSubmit {
+   width: 100px;
+   margin-bottom: 50px;
 }
 
 .social-container {
@@ -583,13 +599,14 @@ input {
    margin-right: 15px;
 }
 
-
 /*----------------------------------------
        Loan Repayment history
 -----------------------------------------*/
 #loan_history {
    display: flex;
    justify-content: space-between;
+   width: 1000px;
+   margin: auto;
 }
 
 #loanSummary {
